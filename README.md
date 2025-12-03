@@ -29,18 +29,20 @@ Les étudiants pratiquant des activités sportives.
 Les étudiants locataires gérant cours + responsabilités domestiques.
 
 👥 Équipe & Responsabilités
-Membre	Responsabilité
-Rayssen Draouil	et Mohamed Gaaloul : Gestion du temps
-Mohamed Zerriaa et Rabii Amraoui : Gestion des cours
-Mohamed Amine Chniti et Sadok Jdidi : Gestion de la pression
+
+- Rayssen Draouil	et Mohamed Gaaloul : Gestion du temps
+- Mohamed Zerriaa et Rabii Amraoui : Gestion des cours
+- Mohamed Amine Chniti et Sadok Jdidi : Gestion de la pression
+
+
 🧰 Technologies Utilisées
 
 HTML – Structure des pages
-
 TailwindCSS – Design rapide et responsive
 Figma – Conception UI/UX et maquettes du projet
 
 🧩 Problèmes Rencontrés & Solutions Apportées
+
 1️⃣ Difficulté à organiser les modules (temps, cours, pression)
 
 Solution : Séparer le projet en pages indépendantes + navigation simple.
