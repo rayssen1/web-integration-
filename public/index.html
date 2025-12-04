@@ -61,40 +61,40 @@
       <aside class="col-span-3 bg-white shadow-material rounded-material p-6">
         <nav class="flex flex-col gap-2">
           
-          <!-- Home Menu Item -->
-          <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+          <!-- Home Menu Item (active on index) -->
+          <div class="flex items-center gap-4 p-4 rounded-material bg-gray-outline transition-colors cursor-pointer" aria-current="page">
             <i class="fas fa-home text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
-            <span class="text-paragraph-material text-dark-text font-medium">Home</span>
+            <span class="text-paragraph-material text-dark-text font-semibold">Home</span>
           </div>
 
           <!-- Emploi de temps Menu Item -->
           <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-calendar-alt text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
-            <span class="text-paragraph-material text-dark-text font-medium">Emploi de temps</span>
+            <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Emploi de temps</span>
           </div>
 
           <!-- Course Menu Item -->
           <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-book text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
-            <span class="text-paragraph-material text-dark-text font-medium">Course</span>
+            <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Course</span>
           </div>
 
           <!-- Remove Pression Menu Item -->
           <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-heart text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
-            <span class="text-paragraph-material text-dark-text font-medium">Remove Pression</span>
+            <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Remove Pression</span>
           </div>
 
-          <!-- Upload Document Menu Item -->
-          <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-upload text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
-            <span class="text-paragraph-material text-dark-text font-medium">Upload document</span>
-          </div>
+          <!-- Upload Document Menu Item (icon changed to plus) -->
+          <a href="insertion-emploi.html" class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors">
+            <i class="fas fa-plus text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Upload document</span>
+          </a>
 
           <!-- Profile Menu Item -->
           <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
             <i class="fas fa-user text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
-            <span class="text-paragraph-material text-dark-text font-medium">Profile</span>
+            <span class="text-paragraph-material text-dark-text font-semibold">Profile</span>
           </div>
         </nav>
       </aside>
@@ -109,7 +109,7 @@
           <div class="flex justify-between items-center shadow-material bg-white rounded-material p-6 hover:shadow-lg transition-shadow">
             <p class="text-paragraph-material text-dark-text font-medium">Emploi de temps</p>
             <button class="bg-primary-violet rounded-material hover:bg-gradient-purple transition-colors flex items-center justify-center" style="width: 30px; height: 30px; min-width: 30px; min-height: 30px;">
-              <i class="fas fa-calendar-plus text-dark-text" style="font-size: 16px;"></i>
+              <i class="fa-solid fa-file-lines text-dark-text" style="font-size: 16px;"></i>
             </button>
           </div>
 
@@ -117,7 +117,7 @@
           <div class="flex justify-between items-center shadow-material bg-white rounded-material p-6 hover:shadow-lg transition-shadow">
             <p class="text-paragraph-material text-dark-text font-medium">Course</p>
             <button class="bg-primary-violet rounded-material hover:bg-gradient-purple transition-colors flex items-center justify-center" style="width: 30px; height: 30px; min-width: 30px; min-height: 30px;">
-              <i class="fas fa-book-open text-dark-text" style="font-size: 16px;"></i>
+              <i class="fa-solid fa-file-lines text-dark-text" style="font-size: 16px;"></i>
             </button>
           </div>
 
@@ -125,7 +125,7 @@
           <div class="flex justify-between items-center shadow-material bg-white rounded-material p-6 hover:shadow-lg transition-shadow">
             <p class="text-paragraph-material text-dark-text font-medium">Remove Pression</p>
             <button class="bg-primary-violet rounded-material hover:bg-gradient-purple transition-colors flex items-center justify-center" style="width: 30px; height: 30px; min-width: 30px; min-height: 30px;">
-              <i class="fas fa-heart text-dark-text" style="font-size: 16px;"></i>
+              <i class="fa-solid fa-file-lines text-dark-text" style="font-size: 16px;"></i>
             </button>
           </div>
         </section>
@@ -164,9 +164,9 @@
               <div class="flex flex-col gap-4">
                 
                 <!-- Course Suggestion -->
-                <div class="flex items-start gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
-                  <div class="bg-teal-accent rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
-                      <i class="fas fa-graduation-cap text-white" style="font-size:16px;"></i>
+                <div class="flex items-start gap-4 p-4  rounded-material hover:bg-gray-300 transition-colors">
+                  <div class="bg-gray-outline rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
+                      <i class="fa-solid fa-building-columns text-dark-text" style="font-size:16px;"></i>
                     </div>
                   <div class="flex-1">
                     <p class="text-paragraph-material text-dark-text font-semibold">Course suggestion</p>
@@ -176,9 +176,9 @@
                 </div>
 
                 <!-- Report Item -->
-                <div class="flex items-start gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
-                  <div class="bg-teal-accent rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
-                    <i class="fas fa-chart-line text-white" style="font-size:16px;"></i>
+                <div class="flex items-start gap-4 p-4  rounded-material hover:bg-gray-300 transition-colors">
+                  <div class="bg-gray-outline rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
+                    <i class="fa-solid fa-chart-line text-dark-text" style="font-size:16px;"></i>
                     </div>
                   <div class="flex-1">
                     <p class="text-paragraph-material text-dark-text font-semibold">Report</p>
@@ -187,9 +187,9 @@
                 </div>
 
                 <!-- Daily Tip -->
-                <div class="flex items-start gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
+                <div class="flex items-start gap-4 p-4 rounded-material hover:bg-gray-300 transition-colors">
                   <div class="bg-gradient-purple rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
-                    <i class="fas fa-lightbulb text-white" style="font-size:16px;"></i>
+                    <i class="fa-solid fa-lightbulb text-dark-text" style="font-size:16px;"></i>
                   </div>
                   <div class="flex-1">
                     <p class="text-paragraph-material text-dark-text font-semibold">Astuce du jour</p>
@@ -238,8 +238,8 @@
               <!-- Activity Item 1 -->
               <div class="flex items-center gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
                 <div class="bg-teal-accent rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
-                    <i class="fas fa-file-upload text-white" style="font-size:16px;"></i>
-                  </div>
+                    <i class="fa-solid fa-check text-dark-text" style="font-size:16px;"></i>
+                  </div> 
                 <div class="flex-1">
                   <p class="text-paragraph-material text-dark-text font-medium">Document uploaded successfully</p>
                   <p class="text-paragraph-material text-gray-500">2 minutes ago</p>
@@ -249,7 +249,7 @@
               <!-- Activity Item 2 -->
               <div class="flex items-center gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
                 <div class="bg-teal-accent rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
-                  <i class="fas fa-check-circle text-white" style="font-size:16px;"></i>
+                  <i class="fa-solid fa-check text-dark-text" style="font-size:16px;"></i>
                 </div>
                 <div class="flex-1">
                   <p class="text-paragraph-material text-dark-text font-medium">Course completed: Review quarterly report</p>
@@ -260,7 +260,7 @@
               <!-- Activity Item 3 -->
               <div class="flex items-center gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
                 <div class="bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
-                  <i class="fas fa-plus-circle text-white" style="font-size:16px;"></i>
+                  <i class="fa-solid fa-plus text-dark-text" style="font-size:16px;"></i>
                 </div>
                 <div class="flex-1">
                   <p class="text-paragraph-material text-dark-text font-medium">New Course assigned: Update Activitys</p>
