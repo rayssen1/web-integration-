@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crono Masters - Charge Mentale</title>
+    <meta
+      name="description"
+      content="Manage your time effectively with Chrono Masters dashboard. Track weekly activities, view performance charts, get course recommendations, and monitor productivity in one intuitive interface."
+    />
+    <meta
+      name="keywords"
+      content="time management, productivity dashboard, course tracking, weekly activity, performance analytics, Chrono Masters"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Chrono Masters Dashboard | Time Management & Productivity"
+    />
+    <meta
+      property="og:description"
+      content="Manage your time effectively with Chrono Masters dashboard. Track weekly activities, view performance charts, and monitor productivity."
+    />
+
+    <link href="output.css" rel="stylesheet" />
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="bg-gray-50 min-h-screen font-inter flex flex-col">
+    <!-- Main Container with 12-column grid layout -->
+    <div
+      class="w-full mx-auto mb-12"
+      style="
+        max-width: calc(100% - 140px);
+        margin-left: 70px;
+        margin-right: 70px;
+        flex: 1 0 auto;
+      "
+    >
+      <!-- Header from index.html -->
+      <header
+        class="flex justify-between items-center w-full shadow-material bg-white px-6 py-4 mb-6"
+        style="
+          width: calc(100% + 140px);
+          margin-left: -70px;
+          margin-right: -70px;
+        "
+      >
+        <div
+          class="w-full mx-auto"
+          style="
+            max-width: calc(100% - 140px);
+            margin-left: 70px;
+            margin-right: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <!-- Logo Section -->
+          <div class="flex items-center gap-2">
+            <img src="logo.png" alt="Chrono Masters" style="height:36px; width:auto;" />
+            <h1 class="text-h1-material text-dark-text">Chrono Masters</h1>
+          </div>
+
+          <!-- Search and Logout Section -->
+          <div class="flex items-center gap-4">
+            <!-- Search Input -->
+            <div class="relative">
+              <i
+                class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm"
+              ></i>
+              <input
+                type="text"
+                placeholder="Search"
+                class="text-paragraph-material text-gray-400 border border-gray-outline rounded-material pl-10 pr-3 py-2 w-48 focus:outline-none focus:ring-2 focus:ring-primary-violet"
+              />
+            </div>
+
+            <!-- Logout Button -->
+            <button
+              class="text-paragraph-material text-white bg-primary-violet rounded-material px-4 py-2 hover:bg-gradient-purple transition-colors"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content Area -->
+      <div class="grid grid-cols-12 gap-5">
+        <!-- Sidebar from index.html -->
+        <aside class="col-span-3 bg-white shadow-material rounded-material p-6">
+          <nav class="flex flex-col gap-2">
+            
+            <!-- Home Menu Item -->
+            <a href="index.html" class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+              <i class="fas fa-home text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-semibold">Home</span>
+            </a>
+
+            <!-- Emploi de temps Menu Item -->
+            <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+              <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-semibold">Emploi de temps</span>
+            </div>
+
+            <!-- Course Menu Item -->
+            <a href="cours.html" class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+              <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-semibold">Course</span>
+            </a>
+
+            <!-- Remove Pression Menu Item -->
+            <a href="charge.html" class="flex items-center gap-4 p-4 rounded-material bg-gray-outline transition-colors cursor-pointer" aria-current="page">
+              <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-semibold">Remove Pression</span>
+            </a>
+
+            <!-- Upload Document Menu Item -->
+            <a href="insertion-emploi.html" class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors">
+              <i class="fas fa-plus text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-semibold">Upload document</span>
+            </a>
+
+            <!-- Profile Menu Item -->
+            <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+              <i class="fas fa-user text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-semibold">Profile</span>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- Main Content from charge.html (kept as is) -->
+        <main class="col-span-9">
+          <div
+            data-layer="Charge Mentale:Amine chniti"
+            class="ChargeMentaleAmineChniti w-full flex flex-col"
+          >
+            <div
+              class="flex-1 flex flex-col px-4"
+            >
+              <div class="w-full space-y-6 mb-12">
+                <!-- Performance Section -->
+                <div
+                  data-layer="Performance"
+                  class="Performance w-full bg-white rounded-lg shadow-[0px_4px_12px_0px_rgba(0,0,0,0.05)] p-6"
+                >
+                  <h3
+                    data-layer="Performance Chart"
+                    class="PerformanceChart text-gray-900 text-sm font-semibold font-['Inter'] mb-4"
+                  >
+                    Performance Chart
+                  </h3>
+                  <div class="flex flex-col items-center gap-4">
+                    <div class="relative w-48 h-48">
+                      <svg
+                        width="192"
+                        height="192"
+                        viewBox="0 0 162 162"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="absolute inset-0"
+                      >
+                        <circle cx="81" cy="81" r="73" fill="white" />
+                        <circle
+                          cx="81"
+                          cy="81"
+                          r="73"
+                          fill="none"
+                          stroke="#E2E8F0"
+                          stroke-width="8"
+                        />
+                        <circle
+                          cx="81"
+                          cy="81"
+                          r="73"
+                          fill="none"
+                          stroke="url(#gradient)"
+                          stroke-width="8"
+                          stroke-dasharray="251.2 251.2"
+                          stroke-dashoffset="55"
+                          stroke-linecap="round"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="gradient"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="0%"
+                          >
+                            <stop offset="0%" stop-color="#667EEA" />
+                            <stop offset="100%" stop-color="#764BA2" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <div
+                        class="absolute inset-0 flex flex-col items-center justify-center"
+                      >
+                        <i
+                          class="fas fa-triangle-exclamation text-red-500 text-3xl mb-2"
+                        ></i>
+                        <p class="text-gray-900 text-2xl font-bold">78%</p>
+                        <p class="text-slate-500 text-xs">Completion</p>
+                      </div>
+                    </div>
+                    <div
+                      data-layer="Charge Élevée"
+                      class="ChargeLevE text-gray-900 text-base font-medium flex items-center gap-2"
+                    >
+                      <span class="text-red-500">⚠</span> Charge Élevée
+                    </div>
+                    <div class="flex gap-4">
+                      <div
+                        class="bg-slate-200 px-3 py-2 rounded-lg text-center"
+                      >
+                        <p class="text-black text-xs font-normal">12 Taches</p>
+                      </div>
+                      <div
+                        class="bg-slate-200 px-3 py-2 rounded-lg text-center"
+                      >
+                        <p class="text-black text-xs font-normal">
+                          3 Deadlines
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Buttons Section -->
+                <div class="flex gap-4 justify-center">
+                  <a href="/decompression.html">
+                    <button
+                      data-layer="Button"
+                      class="Button px-8 py-3 bg-indigo-500 rounded-lg shadow-lg text-white font-bold font-['Montserrat'] hover:bg-indigo-600 transition"
+                    >
+                      Décompression
+                    </button>
+                  </a>
+                  <button
+                    data-layer="Button"
+                    class="Button px-8 py-3 bg-indigo-500 rounded-lg shadow-lg text-white font-bold font-['Montserrat'] hover:bg-indigo-600 transition"
+                  >
+                    Suivi du Bien-être
+                  </button>
+                </div>
+
+                <!-- Weekly Activity Section -->
+                <div
+                  data-layer="Weekly Activ"
+                  class="WeeklyActiv w-full bg-white rounded-lg shadow-[0px_4px_12px_0px_rgba(0,0,0,0.05)] p-6"
+                >
+                  <h3
+                    data-layer="Weekly Activity"
+                    class="WeeklyActivity text-gray-900 text-sm font-semibold font-['Inter'] mb-4"
+                  >
+                    Weekly Activity
+                  </h3>
+                  <div
+                    class="bg-gradient-to-r from-purple-800 to-indigo-500 rounded-full h-24 flex justify-around items-center px-4"
+                  >
+                    <div class="flex flex-col items-center">
+                      <span class="text-white text-xs font-normal">Mon</span>
+                      <span class="text-red-500 text-xs font-normal font-bold"
+                        >75%</span
+                      >
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <span class="text-white text-xs font-normal">Tue</span>
+                      <span class="text-teal-400 text-xs font-normal font-bold"
+                        >25%</span
+                      >
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <span class="text-white text-xs font-normal">Wed</span>
+                      <span class="text-amber-400 text-xs font-normal font-bold"
+                        >50<span class="text-orange-400">%</span></span
+                      >
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <span class="text-white text-xs font-normal">Thu</span>
+                      <span class="text-red-500 text-xs font-normal font-bold"
+                        >75%</span
+                      >
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <span class="text-white text-xs font-normal">Fri</span>
+                      <span class="text-red-500 text-xs font-normal font-bold"
+                        >85%</span
+                      >
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <span class="text-white text-xs font-normal">Sat</span>
+                      <span class="text-green-500 text-xs font-normal font-bold"
+                        >10%</span
+                      >
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <span class="text-white text-xs font-normal">Sun</span>
+                      <span class="text-teal-400 text-xs font-normal font-bold"
+                        >30%</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer from index.html -->
+    <footer
+      class="w-full bg-primary-violet rounded-t-material p-8 flex-shrink-0"
+      style="
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+      "
+    >
+        <div
+          class="w-full mx-auto"
+          style="
+            max-width: calc(100% - 140px);
+            margin-left: 70px;
+            margin-right: 70px;
+          "
+        >
+          <div class="grid grid-cols-12 gap-8">
+            <!-- Company Info -->
+            <div class="col-span-6">
+              <h2 class="text-xl font-bold text-white mb-4">Crono Masters</h2>
+              <p class="text-paragraph-material text-gray-200 mb-4">
+                your app of time management offers optimal organization of work
+                and studies, in a modern, intuitive, and collaborative
+                environment.
+              </p>
+              <div class="flex gap-3">
+                <i
+                  class="fab fa-facebook text-white text-2xl cursor-pointer hover:text-gray-200"
+                ></i>
+                <i
+                  class="fab fa-twitter text-white text-2xl cursor-pointer hover:text-gray-200"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="col-span-3">
+              <h3 class="text-lg font-semibold text-white mb-4">Navigation</h3>
+              <ul class="flex flex-col gap-2">
+                <li>
+                  <a
+                    href="#"
+                    class="text-paragraph-material text-gray-200 hover:text-white transition-colors"
+                    >Accueil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-paragraph-material text-gray-200 hover:text-white transition-colors"
+                    >Gestion de temps</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-paragraph-material text-gray-200 hover:text-white transition-colors"
+                    >Cours</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-paragraph-material text-gray-200 hover:text-white transition-colors"
+                    >Pression</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-span-3">
+              <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
+
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fas fa-map-marker-alt text-white"></i>
+                <span class="text-paragraph-material text-gray-200"
+                  >El ghazela Esprit</span
+                >
+              </div>
+
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fas fa-phone text-white"></i>
+                <span class="text-paragraph-material text-gray-200"
+                  >29538127</span
+                >
+              </div>
+
+              <div class="flex items-center gap-2">
+                <i class="fas fa-envelope text-white"></i>
+                <span class="text-paragraph-material text-gray-200"
+                  >contact@tmp.tn</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+      // Mobile menu toggle functionality
+      function toggleMobileMenu() {
+        const sidebar = document.querySelector("aside");
+        sidebar.classList.toggle("hidden");
+        sidebar.classList.toggle("flex");
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const sidebar = document.querySelector("aside");
+        const menuButton = document.querySelector(
+          'button[onclick="toggleMobileMenu()"]',
+        );
+
+        if (
+          menuButton &&
+          !sidebar.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+          sidebar.classList.add("hidden");
+          sidebar.classList.remove("flex");
+        }
+      });
+    </script>
+  </body>
+</html>
