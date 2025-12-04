@@ -31,16 +31,15 @@ Les étudiants locataires gérant cours + responsabilités domestiques.
 
 👥 Équipe & Responsabilités
 
-- Rayssen Draouil	et Mohamed Gaaloul : Gestion du temps
+- Rayssen Draouil et Mohamed Gaaloul : Gestion du temps
 - Mohamed Zerriaa et Rabii Amraoui : Gestion des cours
 - Mohamed Amine Chniti et Sadok Jdidi : Gestion de la pression
 
-
 🧰 Technologies Utilisées
 
-* HTML – Structure des pages
-* TailwindCSS – Design rapide et responsive
-* Figma – Conception UI/UX et maquettes du projet
+- HTML – Structure des pages
+- TailwindCSS – Design rapide et responsive
+- Figma – Conception UI/UX et maquettes du projet
 
 🧩 Problèmes Rencontrés & Solutions Apportées
 

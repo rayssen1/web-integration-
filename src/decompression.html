@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crono Masters - Charge Mentale</title>
+    <meta name="description" content="Manage your time effectively with Chrono Masters dashboard. Track weekly activities, view performance charts, get course recommendations, and monitor productivity in one intuitive interface.">
+    <meta name="keywords" content="time management, productivity dashboard, course tracking, weekly activity, performance analytics, Chrono Masters">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chrono Masters Dashboard | Time Management & Productivity">
+    <meta property="og:description" content="Manage your time effectively with Chrono Masters dashboard. Track weekly activities, view performance charts, and monitor productivity.">
+    
+    <link rel="stylesheet" href="/public/output.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  </head>
+  <body class="bg-white min-h-screen font-inter flex flex-col">
+    <!-- Main Container with 12-column grid layout -->
+    <div class="w-full mx-auto mb-12" style="max-width: calc(100% - 140px); margin-left: 70px; margin-right: 70px; flex: 1 0 auto;">
+      
+      <!-- Header from index.html -->
+      <header class="flex justify-between items-center w-full shadow-material bg-white px-6 py-4 mb-6" style="width: calc(100% + 140px); margin-left: -70px; margin-right: -70px;">
+        <div class="w-full mx-auto" style="max-width: calc(100% - 140px); margin-left: 70px; margin-right: 70px; display:flex; justify-content:space-between; align-items:center;">
+          <!-- Logo Section -->
+          <div class="flex items-center gap-2">
+            <img src="/public/logo.png" alt="Chrono Masters" style="height:36px; width:auto;" />
+            <h1 class="text-h1-material text-dark-text">Chrono Masters</h1>
+          </div>
+
+          <!-- Search and Logout Section -->
+          <div class="flex items-center gap-4">
+            <!-- Search Input -->
+            <div class="relative">
+              <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm"></i>
+              <input 
+                type="text" 
+                placeholder="Search" 
+                class="text-paragraph-material text-gray-400 border border-gray-outline rounded-material pl-10 pr-3 py-2 w-48 focus:outline-none focus:ring-2 focus:ring-primary-violet"
+              />
+            </div>
+            
+            <!-- Logout Button -->
+            <button class="text-paragraph-material text-white bg-primary-violet rounded-material px-4 py-2 hover:bg-gradient-purple transition-colors">
+              Logout
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content Area -->
+      <div class="grid grid-cols-12 gap-5">
+        
+        <!-- Sidebar from index.html -->
+        <aside class="col-span-3 bg-white shadow-material rounded-material p-6">
+          <nav class="flex flex-col gap-2">
+            
+            <!-- Home Menu Item -->
+            <a href="/" class="block">
+              <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+                <i class="fas fa-home text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+                <span class="text-paragraph-material text-dark-text font-medium">Home</span>
+              </div>
+            </a>
+
+            <!-- Emploi de temps Menu Item -->
+            <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+              <i class="fas fa-calendar-alt text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-medium">Emploi de temps</span>
+            </div>
+
+            <!-- Course Menu Item -->
+            <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+              <i class="fas fa-book text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-medium">Course</span>
+            </div>
+
+            <!-- Pression Menu Item -->
+            <a href="/charge" class="block">
+              <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+                <i class="fas fa-heart text-dark-text" style="width: 20px; height: 20px; display: inline-block; font-size: 20px; line-height: 20px; text-align: center;"></i>
+                <span class="text-paragraph-material text-dark-text font-medium">Pression</span>
+              </div>
+            </a>
+
+            <!-- Upload Document Menu Item -->
+            <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+              <i class="fas fa-upload text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-medium">Upload document</span>
+            </div>
+
+            <!-- Profile Menu Item -->
+            <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+              <i class="fas fa-user text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+              <span class="text-paragraph-material text-dark-text font-medium">Profile</span>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- Main Content from this file (kept as is) -->
+        <main class="col-span-9">
+          <div
+            data-layer="Charge Mentale:Amine chniti"
+            class="ChargeMentaleAmineChniti w-full flex flex-col"
+          >
+            <!-- Centered Content -->
+            <div class="flex-1 flex flex-col items-center px-8">
+              <div class="max-w-4xl w-full space-y-8">
+                <!-- Décompression Methods Section -->
+                <div
+                  data-layer="Background+Shadow"
+                  class="BackgroundShadow w-full bg-white rounded-xl shadow-md p-6"
+                >
+                  <div
+                    data-layer="Méthode Decompression"
+                    class="MThodeDecompression text-gray-900 text-sm font-semibold font-['Inter'] leading-7 mb-6"
+                  >
+                    Méthode Decompression
+                  </div>
+                  
+                  <div class="grid grid-cols-2 gap-4 mb-8">
+                    <!-- Method 1 -->
+                    <div
+                      data-layer="Frame"
+                      class="Frame w-full px-3 py-3 bg-slate-200 rounded-lg flex items-center gap-4"
+                    >
+                      <div data-layer="Frame" class="Frame w-full h-10 relative">
+                        <div
+                          data-layer="Respiration Guidée"
+                          class="RespirationGuidE justify-start text-gray-900 text-sm font-medium font-['Inter'] leading-5"
+                        >
+                          Respiration Guidée
+                        </div>
+                        <div
+                          data-layer="3 minutes"
+                          class="Minutes justify-start text-slate-500 text-xs font-normal font-['Inter'] leading-4"
+                        >
+                          3 minutes
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Method 2 -->
+                    <div
+                      data-layer="Frame"
+                      class="Frame w-full px-3 py-3 bg-slate-200 rounded-lg flex items-center gap-4"
+                    >
+                      <div data-layer="Frame" class="Frame w-full h-10 relative">
+                        <div
+                          data-layer="Elisement"
+                          class="Elisement justify-start text-gray-900 text-sm font-medium font-['Inter'] leading-5"
+                        >
+                          Elisement
+                        </div>
+                        <div
+                          data-layer="15 minutes"
+                          class="Minutes justify-start text-slate-500 text-xs font-normal font-['Inter'] leading-4"
+                        >
+                          15 minutes
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Method 3 -->
+                    <div
+                      data-layer="Frame"
+                      class="Frame w-full px-3 py-3 bg-slate-200 rounded-lg flex items-center gap-4"
+                    >
+                      <div data-layer="Frame" class="Frame w-full h-10 relative">
+                        <div
+                          data-layer="Journal"
+                          class="Journal justify-start text-gray-900 text-sm font-medium font-['Inter'] leading-5"
+                        >
+                          Journal
+                        </div>
+                        <div
+                          data-layer="10 minutes ago"
+                          class="MinutesAgo justify-start text-slate-500 text-xs font-normal font-['Inter'] leading-4"
+                        >
+                          10 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Method 4 -->
+                    <div
+                      data-layer="Frame"
+                      class="Frame w-full px-3 py-3 bg-slate-200 rounded-lg flex items-center gap-4"
+                    >
+                      <div data-layer="Frame" class="Frame w-full h-10 relative">
+                        <div
+                          data-layer="Gratitude Rapide"
+                          class="GratitudeRapide justify-start text-gray-900 text-sm font-medium font-['Inter'] leading-5"
+                        >
+                          Gratitude Rapide
+                        </div>
+                        <div
+                          data-layer="2 minutes ago"
+                          class="MinutesAgo justify-start text-slate-500 text-xs font-normal font-['Inter'] leading-4"
+                        >
+                          2 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Method 5 -->
+                    <div
+                      data-layer="Frame"
+                      class="Frame w-full px-3 py-3 bg-slate-200 rounded-lg flex items-center gap-4"
+                    >
+                      <div data-layer="Frame" class="Frame w-full h-10 relative">
+                        <div
+                          data-layer="Meditation"
+                          class="Meditation justify-start text-gray-900 text-sm font-medium font-['Inter'] leading-5"
+                        >
+                          Meditation
+                        </div>
+                        <div
+                          data-layer="20 minutes ago"
+                          class="MinutesAgo justify-start text-slate-500 text-xs font-normal font-['Inter'] leading-4"
+                        >
+                          20 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Method 6 -->
+                    <div
+                      data-layer="Frame"
+                      class="Frame w-full px-3 py-3 bg-slate-200 rounded-lg flex items-center gap-4"
+                    >
+                      <div data-layer="Frame" class="Frame w-full h-10 relative">
+                        <div
+                          data-layer="Yoga"
+                          class="Yoga justify-start text-gray-900 text-sm font-medium font-['Inter'] leading-5"
+                        >
+                          Yoga
+                        </div>
+                        <div
+                          data-layer="30 minutes ago"
+                          class="MinutesAgo justify-start text-slate-500 text-xs font-normal font-['Inter'] leading-4"
+                        >
+                          30 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- More Methods Button -->
+                  <div class="flex flex-col items-center justify-center">
+                    <a href="/methode-decompression" data-svg-wrapper data-layer="Frame" class="Frame mb-2 cursor-pointer hover:opacity-80 transition">
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="30" height="30" rx="15" fill="#38B2AC" />
+                        <path
+                          d="M16.1429 5.57143C16.1429 4.70223 15.4087 4 14.5 4C13.5913 4 12.8571 4.70223 12.8571 5.57143V13.4286H4.64286C3.73415 13.4286 3 14.1308 3 15C3 15.8692 3.73415 16.5714 4.64286 16.5714H12.8571V24.4286C12.8571 25.2978 13.5913 26 14.5 26C15.4087 26 16.1429 25.2978 16.1429 24.4286V16.5714H24.3571C25.2658 16.5714 26 15.8692 26 15C26 14.1308 25.2658 13.4286 24.3571 13.4286H16.1429V5.57143Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </a>
+                    <div
+                      data-layer="Plus de méthodes"
+                      class="PlusDeMThodes text-center text-gray-500 text-xs font-normal font-['Inter'] leading-4"
+                    >
+                      Plus de méthodes
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Stats Section -->
+                <div class="grid grid-cols-3 gap-6">
+                  <!-- Session Count -->
+                  <div
+                    data-layer="Background+Shadow"
+                    class="BackgroundShadow bg-gradient-to-r from-purple-800 to-indigo-500 rounded-lg shadow-lg h-16 flex flex-col justify-center items-center overflow-hidden"
+                  >
+                    <div
+                      data-layer="Container"
+                      class="Container w-full h-full p-6 flex flex-col justify-center items-center"
+                    >
+                      <div
+                        data-layer="Heading 4"
+                        class="Heading4 w-full relative flex flex-col justify-center items-center"
+                      >
+                        <div
+                          data-layer="12 Sessions"
+                          class="Sessions text-center justify-center text-white text-lg font-bold font-['Montserrat'] leading-7"
+                        >
+                          12 Sessions
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Time Spent -->
+                  <div
+                    data-layer="Background+Shadow"
+                    class="BackgroundShadow bg-gradient-to-r from-purple-800 to-indigo-500 rounded-lg shadow-lg h-16 flex flex-col justify-center items-center overflow-hidden"
+                  >
+                    <div
+                      data-layer="Container"
+                      class="Container w-full h-full p-6 flex flex-col justify-center items-center"
+                    >
+                      <div
+                        data-layer="Heading 4"
+                        class="Heading4 w-full relative flex flex-col justify-center items-center"
+                      >
+                        <div
+                          data-layer="45 Mins"
+                          class="Mins text-center justify-center text-white text-lg font-bold font-['Montserrat'] leading-7"
+                        >
+                          45 Mins
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Streak -->
+                  <div
+                    data-layer="Background+Shadow"
+                    class="BackgroundShadow bg-gradient-to-r from-purple-800 to-indigo-500 rounded-lg shadow-lg h-16 flex flex-col justify-center items-center overflow-hidden"
+                  >
+                    <div
+                      data-layer="Container"
+                      class="Container w-full h-full p-6 flex flex-col justify-center items-center"
+                    >
+                      <div
+                        data-layer="Heading 4"
+                        class="Heading4 w-full relative flex flex-col justify-center items-center"
+                      >
+                        <div
+                          data-layer="Streak 5 Jours"
+                          class="Streak5Jours text-center justify-center text-white text-lg font-bold font-['Montserrat'] leading-7"
+                        >
+                          Streak 5 Jours
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer from index.html -->
+    <footer class="w-full bg-primary-violet rounded-t-material p-8 flex-shrink-0" style="width: 100vw; margin-left: calc(-50vw + 50%);">
+        <div class="w-full mx-auto" style="max-width: calc(100% - 140px); margin-left: 70px; margin-right: 70px;">
+          <div class="grid grid-cols-12 gap-8">
+          
+          <!-- Company Info -->
+          <div class="col-span-6">
+            <h2 class="text-xl font-bold text-white mb-4">Crono Masters</h2>
+            <p class="text-paragraph-material text-gray-200 mb-4">
+              your app of time management offers optimal organization of work and studies, in a modern, intuitive, and collaborative environment.
+            </p>
+            <div class="flex gap-3">
+              <i class="fab fa-facebook text-white text-2xl cursor-pointer hover:text-gray-200"></i>
+              <i class="fab fa-twitter text-white text-2xl cursor-pointer hover:text-gray-200"></i>
+            </div>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="col-span-3">
+            <h3 class="text-lg font-semibold text-white mb-4">Navigation</h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#" class="text-paragraph-material text-gray-200 hover:text-white transition-colors">Accueil</a></li>
+              <li><a href="#" class="text-paragraph-material text-gray-200 hover:text-white transition-colors">Gestion de temps</a></li>
+              <li><a href="#" class="text-paragraph-material text-gray-200 hover:text-white transition-colors">Cours</a></li>
+              <li><a href="#" class="text-paragraph-material text-gray-200 hover:text-white transition-colors">Pression</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-span-3">
+            <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
+            
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fas fa-map-marker-alt text-white"></i>
+              <span class="text-paragraph-material text-gray-200">El ghazela Esprit</span>
+            </div>
+            
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fas fa-phone text-white"></i>
+              <span class="text-paragraph-material text-gray-200">29538127</span>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <i class="fas fa-envelope text-white"></i>
+              <span class="text-paragraph-material text-gray-200">contact@tmp.tn</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+      // Mobile menu toggle functionality
+      function toggleMobileMenu() {
+        const sidebar = document.querySelector('aside');
+        sidebar.classList.toggle('hidden');
+        sidebar.classList.toggle('flex');
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const sidebar = document.querySelector('aside');
+        const menuButton = document.querySelector('button[onclick="toggleMobileMenu()"]');
+        
+        if (menuButton && !sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+          sidebar.classList.add('hidden');
+          sidebar.classList.remove('flex');
+        }
+      });
+    </script>
+  </body>
+</html>

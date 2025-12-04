@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Custom theme extensions */
+@theme {
+  --color-primary-violet: #667eea;
+  --color-gradient-purple: #764ba2;
+  --color-dark-text: #1d1d1b;
+  --color-teal-accent: #38b2ac;
+  --color-gray-outline: #e2e8f0;
+
+  --font-inter: "Inter", sans-serif;
+
+  --radius-material: 8px;
+
+  --shadow-material: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Custom font sizes */
+  --text-h1-material: 16px;
+  --text-h1-material--line-height: 1.2;
+  --text-paragraph-material: 12px;
+  --text-paragraph-material--line-height: 1.5;
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-h1-material {
+    font-size: var(--text-h1-material);
+    line-height: var(--text-h1-material--line-height);
+    font-weight: 700;
+  }
+
+  .text-paragraph-material {
+    font-size: var(--text-paragraph-material);
+    line-height: var(--text-paragraph-material--line-height);
+    font-weight: 400;
+  }
+
+  .border-gray-outline {
+    border-color: var(--color-gray-outline);
+  }
+
+  .hover\:bg-gray-outline:hover {
+    background-color: var(--color-gray-outline);
+  }
+
+  .focus\:ring-primary-violet:focus {
+    --tw-ring-color: var(--color-primary-violet);
+  }
+
+  .hover\:bg-gradient-purple:hover {
+    background-color: var(--color-gradient-purple);
+  }
+
+  .font-inter {
+    font-family: var(--font-inter);
+  }
+}
