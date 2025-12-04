@@ -17,10 +17,10 @@
 
 <body class="bg-white min-h-screen font-inter">
 
-  <!-- Main Container (IDENTIQUE à index.html) -->
+  <!-- Main Container -->
   <div class="w-full mx-auto" style="max-width: calc(100% - 140px); margin-left: 70px; margin-right: 70px;">
 
-    <!-- Header (IDENTIQUE à index.html) -->
+    <!-- Header -->
     <header class="flex justify-between items-center w-full shadow-material bg-white px-6 py-4 mb-6"
             style="width: calc(100% + 140px); margin-left: -70px; margin-right: -70px;">
       <div class="w-full mx-auto"
@@ -51,183 +51,195 @@
       </div>
     </header>
 
-    <!-- GRID PRINCIPALE (IDENTIQUE à index.html) -->
+    <!-- GRID PRINCIPALE -->
     <div class="grid grid-cols-12 gap-5">
 
-      <!-- Sidebar (IDENTIQUE, sauf Cours actif) -->
+       <!-- Sidebar -->
       <aside class="col-span-3 bg-white shadow-material rounded-material p-6">
         <nav class="flex flex-col gap-2">
-
-          <a href="index.html"
-             class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-home text-dark-text" style="width:20px; height:20px; font-size:20px; line-height:20px; text-align:center;"></i>
-            <span class="text-paragraph-material text-dark-text font-medium">Home</span>
-          </a>
-
+          
+          <!-- Home Menu Item -->
           <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-calendar-alt text-dark-text" style="width:20px; height:20px; font-size:20px; line-height:20px; text-align:center;"></i>
+            <i class="fas fa-home text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-medium">Home</span>
+          </div>
+
+          <!-- Emploi de temps Menu Item -->
+          <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+            <i class="fas fa-calendar-alt text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
             <span class="text-paragraph-material text-dark-text font-medium">Emploi de temps</span>
           </div>
 
-          <!-- Cours ACTIF -->
-          <div class="flex items-center gap-4 p-4 rounded-material bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-book text-dark-text" style="width:20px; height:20px; font-size:20px; line-height:20px; text-align:center;"></i>
-            <span class="text-paragraph-material text-dark-text font-medium">course</span>
-          </div>
+          <!-- Course Menu Item -->
+          <a href="cours.html"
+   class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+    <i class="fas fa-book text-dark-text"
+       style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;">
+    </i>
 
+    <span class="text-paragraph-material text-dark-text font-medium">Course</span>
+</a>
+
+
+          <!-- Remove Pression Menu Item -->
           <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-heart text-dark-text" style="width:20px; height:20px; font-size:20px; line-height:20px; text-align:center;"></i>
+            <i class="fas fa-heart text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
             <span class="text-paragraph-material text-dark-text font-medium">Remove Pression</span>
           </div>
 
+          <!-- Upload Document Menu Item -->
           <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-upload text-dark-text" style="width:20px; height:20px; font-size:20px; line-height:20px; text-align:center;"></i>
+            <i class="fas fa-upload text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
             <span class="text-paragraph-material text-dark-text font-medium">Upload document</span>
           </div>
 
+          <!-- Profile Menu Item -->
           <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
-            <i class="fas fa-user text-dark-text" style="width:20px; height:20px; font-size:20px; line-height:20px; text-align:center;"></i>
+            <i class="fas fa-user text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
             <span class="text-paragraph-material text-dark-text font-medium">Profile</span>
           </div>
         </nav>
       </aside>
 
-      <main class="col-span-9 flex flex-col gap-8">
+      <!-- MAIN DYNAMIQUE ICI -->
+      <main id="main-content" class="col-span-9 flex flex-col gap-8">
 
-  <!-- BARRE "Mes Cours" -->
-  <section class="bg-primary-violet text-white rounded-material px-6 py-3 shadow-material mx-auto"
-           style="width: 452px;">
-    <h2 class="text-lg font-semibold text-center">Mes Cours</h2>
-  </section>
+        <!-- BARRE Mes Cours -->
+        <section class="bg-primary-violet text-white rounded-material px-6 py-3 shadow-material mx-auto"
+                style="width: 452px;">
+          <h2 class="text-lg font-semibold text-center">Mes Cours</h2>
+        </section>
 
-  <!-- BARRE "Semester 1" -->
-  <section class="bg-gray-outline rounded-material px-6 py-3 flex items-center justify-between mx-auto"
-           style="width: 380px;">
-    <span class="text-paragraph-material text-dark-text font-medium">Semester 1</span>
-    <i class="fas fa-chevron-right text-dark-text"></i>
-  </section>
+        <!-- BARRE Semester 1 -->
+        <section class="bg-gray-outline rounded-material px-6 py-3 flex items-center justify-between mx-auto"
+                style="width: 380px;">
+          <span class="text-paragraph-material text-dark-text font-medium">Semester 1</span>
+          <i class="fas fa-chevron-right text-dark-text"></i>
+        </section>
 
-  <!-- GRID DES COURS (6 items, 3 colonnes) -->
-  <section class="grid grid-cols-3 gap-14 justify-items-center">
+        <!-- GRID DES COURS -->
+        <section class="grid grid-cols-3 gap-14 justify-items-center">
 
-    <!-- COURS 1 - Big Data -->
-    <article class="flex flex-col items-center">
-      <h3 class="font-semibold text-dark-text mb-2 text-center">Advanced Big Data</h3>
+          <!-- COURS 1 -->
+          <article class="flex flex-col items-center">
+            <h3 class="font-semibold text-dark-text mb-2 text-center">Advanced Big Data</h3>
 
-      <!-- IMAGE SEULE DANS SON CADRE -->
-      <img src="images/bigdata.jpg"
-           style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
+            <img src="images/bigdata.jpg"
+                 style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
 
-      <!-- TEXTE EN DEHORS DU CADRE IMAGE -->
-      <div class="mt-3 text-sm text-dark-text leading-tight text-left">
-        <p>durée : 14 semaines</p>
-        <p>enseignant(e) : abdallah</p>
-      </div>
+            <div class="mt-3 text-sm text-dark-text leading-tight">
+              <p>durée : 14 semaines</p>
+              <p>enseignant(e) : abdallah</p>
+            </div>
 
-      <!-- BOUTON EN DEHORS DU CADRE IMAGE -->
-      <button class="bg-primary-violet text-white rounded-material mt-3"
-              style="width:149px; height:34px; font-size:14px;">
-        continuer
-      </button>
-    </article>
+            <button class="open-course bg-primary-violet text-white rounded-material mt-3"
+                    data-course="bigdata"
+                    style="width:149px; height:34px; font-size:14px;">
+              continuer
+            </button>
+          </article>
 
-    <!-- COURS 2 - UX Design -->
-    <article class="flex flex-col items-center">
-      <h3 class="font-semibold text-dark-text mb-2 text-center">UX Design</h3>
+          <!-- COURS 2 -->
+          <article class="flex flex-col items-center">
+            <h3 class="font-semibold text-dark-text mb-2 text-center">UX Design</h3>
 
-      <img src="images/uxui.jpg"
-           style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
+            <img src="images/uxui.jpg"
+                 style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
 
-      <div class="mt-3 text-sm text-dark-text leading-tight text-left">
-        <p>durée : 7 semaines</p>
-        <p>enseignant(e) : farida</p>
-      </div>
+            <div class="mt-3 text-sm text-dark-text leading-tight">
+              <p>durée : 7 semaines</p>
+              <p>enseignant(e) : farida</p>
+            </div>
 
-      <button class="bg-primary-violet text-white rounded-material mt-3"
-              style="width:149px; height:34px; font-size:14px;">
-        continuer
-      </button>
-    </article>
+            <button class="open-course bg-primary-violet text-white rounded-material mt-3"
+                    data-course="ux"
+                    style="width:149px; height:34px; font-size:14px;">
+              continuer
+            </button>
+          </article>
 
-    <!-- COURS 3 - Programmation Linéaire -->
-    <article class="flex flex-col items-center">
-      <h3 class="font-semibold text-dark-text mb-2 text-center">Programmation Linéaire</h3>
+          <!-- COURS 3 -->
+          <article class="flex flex-col items-center">
+            <h3 class="font-semibold text-dark-text mb-2 text-center">Programmation Linéaire</h3>
 
-      <img src="images/programmation.jpg"
-           style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
+            <img src="images/programmation.jpg"
+                 style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
 
-      <div class="mt-3 text-sm text-dark-text leading-tight text-left">
-        <p>durée : 14 semaines</p>
-        <p>enseignant(e) : farida</p>
-      </div>
+            <div class="mt-3 text-sm text-dark-text leading-tight">
+              <p>durée : 14 semaines</p>
+              <p>enseignant(e) : farida</p>
+            </div>
 
-      <button class="bg-primary-violet text-white rounded-material mt-3"
-              style="width:149px; height:34px; font-size:14px;">
-        terminé
-      </button>
-    </article>
+            <button class="open-course bg-primary-violet text-white rounded-material mt-3"
+                    data-course="lineaire"
+                    style="width:149px; height:34px; font-size:14px;">
+              terminé
+            </button>
+          </article>
 
-    <!-- COURS 4 - Probabilité -->
-    <article class="flex flex-col items-center">
-      <h3 class="font-semibold text-dark-text mb-2 text-center">Probabilité</h3>
+          <!-- COURS 4 -->
+          <article class="flex flex-col items-center">
+            <h3 class="font-semibold text-dark-text mb-2 text-center">Probabilité</h3>
 
-      <img src="images/probabilite.jpg"
-           style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
+            <img src="images/probabilite.jpg"
+                 style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
 
-      <div class="mt-3 text-sm text-dark-text leading-tight text-left">
-        <p>durée : 14 semaines</p>
-        <p>enseignant(e) : abdallah</p>
-      </div>
+            <div class="mt-3 text-sm text-dark-text leading-tight">
+              <p>durée : 14 semaines</p>
+              <p>enseignant(e) : abdallah</p>
+            </div>
 
-      <button class="bg-primary-violet text-white rounded-material mt-3"
-              style="width:149px; height:34px; font-size:14px;">
-        terminé
-      </button>
-    </article>
+            <button class="open-course bg-primary-violet text-white rounded-material mt-3"
+                    data-course="proba"
+                    style="width:149px; height:34px; font-size:14px;">
+              terminé
+            </button>
+          </article>
 
-    <!-- COURS 5 - Angular -->
-    <article class="flex flex-col items-center">
-      <h3 class="font-semibold text-dark-text mb-2 text-center">Angular</h3>
+          <!-- COURS 5 -->
+          <article class="flex flex-col items-center">
+            <h3 class="font-semibold text-dark-text mb-2 text-center">Angular</h3>
 
-      <img src="images/angular.jpg"
-           style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
+            <img src="images/angular.jpg"
+                 style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
 
-      <div class="mt-3 text-sm text-dark-text leading-tight text-left">
-        <p>durée : 7 semaines</p>
-        <p>enseignant(e) : farida</p>
-      </div>
+            <div class="mt-3 text-sm text-dark-text leading-tight">
+              <p>durée : 7 semaines</p>
+              <p>enseignant(e) : farida</p>
+            </div>
 
-      <button class="bg-primary-violet text-white rounded-material mt-3"
-              style="width:149px; height:34px; font-size:14px;">
-        continuer
-      </button>
-    </article>
+            <button class="open-course bg-primary-violet text-white rounded-material mt-3"
+                    data-course="angular"
+                    style="width:149px; height:34px; font-size:14px;">
+              continuer
+            </button>
+          </article>
 
-    <!-- COURS 6 - Spring Boot -->
-    <article class="flex flex-col items-center">
-      <h3 class="font-semibold text-dark-text mb-2 text-center">Spring Boot</h3>
+          <!-- COURS 6 -->
+          <article class="flex flex-col items-center">
+            <h3 class="font-semibold text-dark-text mb-2 text-center">Spring Boot</h3>
 
-      <img src="images/springboot.jpg"
-           style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
+            <img src="images/springboot.jpg"
+                 style="width:214px; height:142px; object-fit:cover; border-radius:8px;">
 
-      <div class="mt-3 text-sm text-dark-text leading-tight text-left">
-        <p>durée : 14 semaines</p>
-        <p>enseignant(e) : farid</p>
-      </div>
+            <div class="mt-3 text-sm text-dark-text leading-tight">
+              <p>durée : 14 semaines</p>
+              <p>enseignant(e) : farid</p>
+            </div>
 
-      <button class="bg-primary-violet text-white rounded-material mt-3"
-              style="width:149px; height:34px; font-size:14px;">
-        terminé
-      </button>
-    </article>
+            <button class="open-course bg-primary-violet text-white rounded-material mt-3"
+                    data-course="spring"
+                    style="width:149px; height:34px; font-size:14px;">
+              terminé
+            </button>
+          </article>
 
-  </section>
+        </section>
 
-</main>
-
+      </main>
     </div>
 
-    <!-- Footer (IDENTIQUE à index.html) -->
+    <!-- Footer -->
     <footer class="w-full bg-primary-violet rounded-t-material mt-12 p-8"
             style="width: calc(100% + 140px); margin-left: -70px; margin-right: -70px;">
       <div class="w-full mx-auto"
@@ -264,6 +276,200 @@
     </footer>
 
   </div>
+
+  <!-- SCRIPT POUR L'AFFICHAGE COURS -->
+  <script>
+
+document.querySelectorAll(".open-course").forEach(btn => {
+    btn.addEventListener("click", function () {
+
+        const course = this.dataset.course;
+
+        if (course === "ux") {
+
+        document.getElementById("main-content").innerHTML = `
+
+<div class="w-full px-12">
+
+  <!-- BOUTON RETOUR -->
+  <div class="flex items-center gap-2 cursor-pointer text-dark-text mb-6"
+       onclick="location.reload()">
+    <i class="fas fa-arrow-left"></i>
+    <span>Retour</span>
+  </div>
+
+  <!-- BARRE AFFICHAGE COURS -->
+  <div class="w-full flex justify-center mb-10">
+    <div class="w-[453px] h-[78px] border border-gray-300 rounded-xl
+                flex items-center justify-center text-dark-text text-xl font-semibold">
+        Affichage cours
+    </div>
+  </div>
+
+  <!-- TEXTE + IMAGE ALIGNÉS COMME FIGMA -->
+  <div class="flex justify-between items-start mt-5">
+
+    <!-- TEXTE UX -->
+    <div class="w-[348px]">
+      <h2 class="text-2xl font-bold mb-4">UX Design</h2>
+
+      <p class="text-dark-text text-base leading-tight mb-4">
+        Découvrez le processus de conception centré sur l'utilisateur
+      </p>
+
+      <ul class="text-dark-text text-sm leading-6">
+        <li>.Durée: 7 semaines</li>
+        <li>.niveau : débutant</li>
+        <li>.6 chapitres</li>
+      </ul>
+    </div>
+
+    <!-- IMAGE + BOUTON -->
+    <div class="flex flex-col items-center mr-24">
+      <img src="images/uxui.jpg"
+           class="rounded-md object-cover mb-4"
+           style="width:228px; height:152px;">
+
+      <button class="bg-primary-violet text-white rounded-material px-6 py-2"
+              style="width:161px; height:45px;">
+        Suivi mes cours
+      </button>
+    </div>
+
+  </div> <!-- FIN DU BLOC TEXTE+IMAGE  -->
+
+</div> <!-- FIN DU CONTAINER PRINCIPAL  -->
+
+<!-- BLOC CHAPITRE ACTUEL -->
+<div style="
+    position: relative;
+    width: 540px;
+    height: 420px;  /* HAUTEUR FIXÉE POUR AFFICHER LES BOUTONS */
+    border: 1px solid #E2E8F0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+">
+
+    <!-- HEADER VIOLET -->
+    <div style="
+        background:#667EEA; 
+        color:white;
+        padding:10px 15px;
+        border-radius:12px 12px 0 0;
+        font-size:18px; 
+        font-weight:600;
+    ">
+        chapitre actuel
+    </div>
+
+    <!-- TITRE -->
+    <h3 style="
+        text-align:center;
+        font-size:22px;
+        font-weight:600;
+        margin-top:15px;
+        margin-bottom:10px;
+    ">
+        Chapitre 1 : Introduction
+    </h3>
+
+    <!-- DESCRIPTION -->
+    <p style="
+        text-align:center;
+        font-size:15px;
+        line-height:20px;
+        color:#1D1D1B;
+    ">
+        Découvrez les bases de conception UX et sa <br>
+        importance dans le développement de produit
+    </p>
+
+    <!-- BARRE DE PROGRESSION -->
+    <div style="width:100%; display:flex; justify-content:center; margin-top:25px;">
+
+        <div style="
+            width: 480px;
+            height: 17px;
+            background:#D9D9D9;
+            border-radius:6px;
+            position:relative;
+        ">
+            <div style="
+                width: 70%;
+                height: 17px;
+                background:#667EEA;
+                border-radius:6px;
+                position:absolute;
+                top:0;
+                left:0;
+            ">
+            </div>
+        </div>
+
+        <span style="
+            margin-left:10px;
+            font-size:18px;
+            font-weight:600;
+            color:#1D1D1B;
+        ">70%</span>
+    </div>
+
+    <!-- BOUTONS BAS (position exacte) -->
+
+    <!-- Mode d’apprentissage -->
+    <button 
+        style="
+            width:172px;
+            height:46px;
+            border-radius:50px;
+            background:#E2E8F0;
+            color:#1A202C;
+            font-weight:500;
+
+            position:absolute;
+            left:35px;
+            top:275px;
+        ">
+        Mode d’apprentissage
+    </button>
+
+    <!-- Continuer -->
+    <button 
+        style="
+            width:166px;
+            height:46px;
+            border-radius:50px;
+            background:#667EEA;
+            color:white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+            font-size:16px;
+
+            position:absolute;
+            left:343px;
+            top:275px;
+        ">
+        continuer <i class="fas fa-chevron-right"></i>
+    </button>
+
+</div>
+
+
+
+
+`;
+
+
+        }
+
+    });
+});
+
+  </script>
 
 </body>
 </html>
