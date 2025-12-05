@@ -83,13 +83,7 @@
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
+
   --tw-drop-shadow:  ;
   --tw-backdrop-blur:  ;
   --tw-backdrop-brightness:  ;
@@ -188,6 +182,13 @@ hr {
   color: inherit;
   /* 2 */
   border-top-width: 1px;
+.text-primary-orange {
+  color: #ED8936;
+}
+
+.hover\:text-primary-orange:hover {
+  color: #ED8936;
+}
   /* 3 */
 }
 

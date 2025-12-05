@@ -68,10 +68,10 @@
           </div>
 
           <!-- Emploi de temps Menu Item -->
-          <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+          <a href="emploi.html" class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
             <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
             <span class="text-paragraph-material text-dark-text font-semibold">Emploi de temps</span>
-          </div>
+          </a>
 
           <!-- Course Menu Item -->
           <a href="cours.html" class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
@@ -141,8 +141,8 @@
               <h2 class="text-h1-material text-dark-text mb-6">Weekly Activity</h2>
               
               <div class="flex flex-col gap-6">
-                <!-- Progress Bar with Gradient -->
-                <div class="w-full h-2 rounded-full" style="background: linear-gradient(90deg, #764BA2 0%, #667EEA 100%);"></div>
+                <!-- Progress Bar (solid color) -->
+                <div class="w-full h-2 rounded-full" style="background: #667EEA;"></div>
                 
                 <!-- Week Days -->
                 <div class="flex justify-between">
@@ -207,17 +207,11 @@
             <!-- Chart Container -->
             <div class="flex flex-col items-center justify-center">
               <div class="relative w-40 h-40">
-                <!-- SVG Circle Chart -->
-                <svg class="w-full h-full transform -rotate-90">
-                  <circle cx="80" cy="80" r="70" stroke="#E2E8F0" stroke-width="12" fill="none"/>
-                  <circle cx="80" cy="80" r="70" stroke="url(#gradient)" stroke-width="12" fill="none" 
-                          stroke-dasharray="440" stroke-dashoffset="97" stroke-linecap="round"/>
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style="stop-color:#764BA2;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#667EEA;stop-opacity:1" />
-                    </linearGradient>
-                  </defs>
+                <!-- SVG Circle Chart (solid color stroke, aligned) -->
+                <svg class="w-full h-full">
+                  <circle cx="80" cy="80" r="70" stroke="#E2E8F0" stroke-width="8" fill="none"/>
+                      <circle cx="80" cy="80" r="70" stroke="#667EEA" stroke-width="8" fill="none"
+                        stroke-dasharray="60 50" stroke-dashoffset="-80" stroke-linecap="round"/>
                 </svg>
                 <div class="absolute inset-0 flex flex-col items-center justify-center">
                   <p class="text-2xl font-bold text-dark-text">78%</p>

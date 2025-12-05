@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emploi — Structure</title>
+  <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-white min-h-screen font-inter">
+  <!-- Main Container (same grid and spacing as index) -->
+  <div class="w-full mx-auto" style="max-width: calc(100% - 140px); margin-left: 70px; margin-right: 70px;">
+
+    <!-- Header (copied from insertion-emploi) -->
+    <header class="flex justify-between items-center w-full shadow-material bg-white px-6 py-4 mb-6" style="width: calc(100% + 140px); margin-left: -70px; margin-right: -70px;">
+      <div class="w-full mx-auto" style="max-width: calc(100% - 140px); margin-left: 70px; margin-right: 70px; display:flex; justify-content:space-between; align-items:center;">
+        <div class="flex items-center gap-2">
+          <img src="logo.png" alt="Chrono Masters" style="height:36px; width:auto;" />
+          <h1 class="text-h1-material text-dark-text">Chrono Masters</h1>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm"></i>
+            <input type="text" placeholder="Search" class="text-paragraph-material text-gray-400 border border-gray-outline rounded-material pl-10 pr-3 py-2 w-48 focus:outline-none focus:ring-2 focus:ring-primary-violet" />
+          </div>
+          <button class="text-paragraph-material text-white bg-primary-violet rounded-material px-4 py-2 hover:bg-gradient-purple transition-colors">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid grid-cols-12 gap-5">
+      <!-- Sidebar (copied) -->
+      <aside class="col-span-3 bg-white shadow-material rounded-material p-6">
+        <nav class="flex flex-col gap-2">
+          <a href="index.html" class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors">
+            <i class="fas fa-home text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Home</span>
+          </a>
+          <div class="flex items-center gap-4 p-4 rounded-material bg-gray-outline transition-colors cursor-pointer">
+            <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Emploi de temps</span>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+            <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Course</span>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+            <i class="fa-solid fa-file-lines text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Remove Pression</span>
+          </div>
+          <a href="insertion-emploi.html" class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline cursor-pointer" aria-current="page">
+            <i class="fas fa-plus text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Upload document</span>
+          </a>
+          <div class="flex items-center gap-4 p-4 rounded-material hover:bg-gray-outline transition-colors cursor-pointer">
+            <i class="fas fa-user text-dark-text" style="width:20px; height:20px; display:inline-block; font-size:20px; line-height:20px; text-align:center;"></i>
+            <span class="text-paragraph-material text-dark-text font-semibold">Profile</span>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="col-span-9">
+        <div class="w-full">
+          <!-- Progress pill (copied from insertion-emploi) -->
+          <div class="flex justify-center mb-8">
+            <div class="w-full max-w-xl">
+              <div class="bg-white border border-gray-200 rounded-material p-4 shadow-sm overflow-hidden">
+                <div class="px-4 py-2">
+                    <div class="w-full relative" style="--circle-size:32px;">
+                      <!-- base gray line between circle edges -->
+                      <div style="position:absolute; left:var(--circle-size); right:var(--circle-size); top:50%; transform:translateY(calc(-50% + 10px)); height:8px; background-color:rgb(236,241,246); border-radius:8px; z-index:5; pointer-events:none;"></div>
+                      <!-- purple overlay between circle 1 and 2 -->
+                      <div style="position:absolute; left:var(--circle-size); right:calc(50% + (var(--circle-size) / 2)); top:50%; transform:translateY(calc(-50% + 10px)); height:8px; background-color:rgb(102,126,234); border-radius:8px; z-index:6; pointer-events:none;"></div>
+
+                      <!-- circles positioned absolutely (labels placed above) -->
+                      <div class="relative z-20 w-full" style="height:64px;">
+                        <!-- Step 1 (left) -->
+                        <div style="position:absolute; left:0; top:50%; width:var(--circle-size); height:var(--circle-size); text-align:center;">
+                          <div style="position:absolute; left:50%; top:calc(-1 * (var(--circle-size) / 2) - 10px); transform:translateX(-50%); font-weight:700; color:rgb(17,24,39); font-size:15px;">Import</div>
+                          <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:var(--circle-size); height:var(--circle-size); border-radius:9999px; background-color:rgb(240,244,247); color:rgb(17,24,39); display:flex; align-items:center; justify-content:center; font-weight:700; z-index:30; font-size:14px;">1</div>
+                        </div>
+
+                        <!-- Step 2 (center) -->
+                        <div style="position:absolute; left:calc(50% - (var(--circle-size) / 2)); top:50%; width:var(--circle-size); height:var(--circle-size); text-align:center;">
+                          <div style="position:absolute; left:50%; top:calc(-1 * (var(--circle-size) / 2) - 10px); transform:translateX(-50%); font-weight:700; color:rgb(17,24,39); font-size:15px;">verify</div>
+                          <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:var(--circle-size); height:var(--circle-size); border-radius:9999px; background-color:rgb(102,126,234); color:rgb(17,24,39); display:flex; align-items:center; justify-content:center; font-weight:700; z-index:30; font-size:14px;">2</div>
+                        </div>
+
+                        <!-- Step 3 (right) -->
+                        <div style="position:absolute; left:calc(100% - var(--circle-size)); top:50%; width:var(--circle-size); height:var(--circle-size); text-align:center;">
+                          <div style="position:absolute; left:50%; top:calc(-1 * (var(--circle-size) / 2) - 10px); transform:translateX(-50%); font-weight:700; color:rgb(17,24,39); font-size:15px;">Generate</div>
+                          <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:var(--circle-size); height:var(--circle-size); border-radius:9999px; background-color:rgb(240,244,247); color:rgb(17,24,39); display:flex; align-items:center; justify-content:center; font-weight:700; z-index:30; font-size:14px;">3</div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard content grid -->
+          <section class="grid grid-cols-3 gap-5">
+            <div class="col-span-2 flex flex-col gap-6">
+              <div class="shadow-material bg-white rounded-material p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">Your Schedule</h3>
+                    <p class="text-sm text-gray-500">Accepted formats: PDF, PNG, JPG (max 10 MB)</p>
+                  </div>
+                   <button class="bg-gray-outline rounded-material hover:bg-gradient-purple transition-colors flex items-center justify-center" style="width: 30px; height: 30px; min-width: 30px; min-height: 30px;">
+              <i class="fas fa-file-upload text-dark-text" style="font-size: 16px;"></i>
+            </button>
+                </div>
+
+                <div class="border border-gray-outline rounded-material p-4 mb-4 bg-white">
+                  <div class="mb-3 flex items-center justify-between">
+                    <div class="text-xl font-bold text-gray-900">schedule_semester2.pdf</div>
+                    <div class="text-sm text-teal-600 flex items-center gap-1">Imported <i class="fas fa-check"></i></div>
+                  </div>
+
+                  <div class="w-full h-56 bg-gray-100 border border-gray-200 rounded-material overflow-hidden flex items-center justify-center">
+                    <img src="images/e.png" alt="schedule preview" class="object-contain w-full h-full" />
+                  </div>
+
+                  <div class="mt-6 justify-between">
+                    <a href="#" class="inline-flex items-center gap-2 text-primary-violet hover:underline">
+                      <span class="text-sm">Preview</span>
+                    </a>
+
+                    <a href="#" class="text-primary-orange hover:underline">• Delete</a>
+                  </div>
+
+                  <div class="mt-6 flex items-center justify-normal text-sm text-gray-600">
+                    <div class="flex items-center gap-3">
+                      <span class="inline-flex items-center justify-center w-6 h-6 bg-white border rounded-md">
+                        <i class="fas fa-file-pdf text-gray-700"></i>
+                      </span>
+                      
+                    </div>
+
+                    <div>2.4 MB • Imported 2 minutes ago</div>
+                  </div>
+                </div>
+                </div>
+
+
+              <div class="shadow-material bg-white rounded-material p-6" > <!-- left widget placeholder --> 
+                
+               
+                  <div class="mt-2">
+                    <button class="w-full bg-primary-violet font-bold text-white py-2 rounded-material px-6 hover:bg-gradient-purple transition-colors flex items-center justify-center gap-3">
+                      <i class="fa-solid fa-wand-magic-sparkles text-white"></i>
+                      <span>Transform into Smart Schedule</span>
+                    </button>
+                    <p class="mt-6 text-sm text-gray-500 flex justify-center text-center">Our AI will automatically analyze your schedule and create an optimized planner</p>
+                  </div>
+              </div>
+              </div>
+            
+
+            <div class="col-span-1">
+              <div class="shadow-material bg-white rounded-material p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="text-lg font-medium text-gray-900">Add Task</h3>
+                    <p class="text-sm text-gray-500">Quick task creation</p>
+                  </div>
+                  <div>
+                    <button class="bg-primary-violet rounded-material hover:bg-gradient-purple transition-colors flex items-center justify-center" style="width: 30px; height: 30px; min-width: 30px; min-height: 30px;">
+                <i class="fas fa-plus text-dark-text" style="font-size: 16px;"></i>
+              </button>
+                  </div>
+                </div>
+
+                <form class="space-y-4" aria-label="Add task form">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-3">Task Title</label>
+                  <input type="text" placeholder="Ex: Review Chapter 3" class="block w-full rounded-material border border-gray-300 px-3 py-2 text-sm placeholder-gray-400 bg-white focus:outline-none focus:ring-2 focus:ring-primary-violet" />
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-3">Date &amp; Time</label>
+                  <input type="text" placeholder="mm/dd/yyyy, --:-- --" class="block w-full rounded-material border border-gray-300 px-3 py-2 text-sm placeholder-gray-400 bg-white focus:outline-none focus:ring-2 focus:ring-primary-violet" />
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-3">Description</label>
+                  <textarea rows="4" placeholder="Add details..." class="block w-full rounded-material border border-gray-300 px-3 py-2 text-sm placeholder-gray-400 bg-white focus:outline-none focus:ring-2 focus:ring-primary-violet"></textarea>
+                </div>
+
+                <div>
+                  <button type="submit" class="w-full bg-primary-violet text-white py-2 rounded-material px-6 hover:bg-gradient-purple transition-colors flex items-center justify-center gap-3">
+                    <i class="fas fa-check-circle text-white text-lg"></i>
+                    <span class="font-medium">Add Task</span>
+                  </button>
+                </div>
+                </form>
+              </div>
+
+              <!-- Suggestions (separate card) -->
+              <div class="mt-6">
+                <div class="shadow-material bg-white rounded-material p-4">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-gray-outline rounded-material w-10 h-10 flex items-center justify-center">
+                      <i class="fa-solid fa-robot text-teal-accent"></i>
+                    </div>
+                    <div>
+                      <div class="text-base font-semibold">Suggestions</div>
+                      <div class="text-sm text-gray-500">AI-powered</div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-3">
+                    <div class="bg-gray-outline rounded-material p-4" style="min-height:72px;">
+                      <div class="flex items-start justify-between mb-1">
+                        <div class="font-semibold">Free Slot</div>
+                        <div class="text-xs text-teal-600">Wed</div>
+                      </div>
+                      <div class="text-sm text-gray-700">2:00 PM - 4:00 PM: Review physics</div>
+                      <a href="#" class="text-primary-violet text-sm mt-2 inline-block">Add</a>
+                    </div>
+
+                    <div class="bg-gray-outline rounded-material p-4" style="min-height:72px;">
+                      <div class="flex items-start justify-between mb-1">
+                        <div class="font-semibold">Reminder</div>
+                        <div class="text-xs text-teal-600">Fri</div>
+                      </div>
+                      <div class="text-sm text-gray-700">Lab assignment due before 6:00 PM</div>
+                      <a href="#" class="text-primary-violet text-sm mt-2 inline-block">Create</a>
+                    </div>
+
+                    <div class="bg-gray-outline rounded-material p-4" style="min-height:72px;">
+                      <div class="flex items-start justify-between mb-1">
+                        <div class="font-semibold">Optimization</div>
+                        <div class="text-xs text-teal-600">Mon</div>
+                      </div>
+                      <div class="text-sm text-gray-700">Group math reviews 10 AM-12 PM</div>
+                      <a href="#" class="text-primary-violet text-sm mt-2 inline-block">Apply</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent activity / other sections -->
+          <section class="mt-6">
+            <div class="grid grid-cols-3 gap-5">
+              <div class="col-span-2">
+                <div class="shadow-material bg-white rounded-material p-6">
+                  <h3 class="text-h1-material text-dark-text mb-6">Tips& Best Practices</h3>
+                  
+                  <div class="flex flex-col gap-4">
+                    
+                    <!-- Activity Item 1 -->
+                    <div class="flex items-center gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
+                      <div class="bg-gradient-purple rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
+                        <i class="fa-solid fa-check text-dark-text" style="font-size:16px;"></i>
+                      </div> 
+                      <div class="flex-1">
+                        <p class="text-paragraph-material text-dark-text font-bold">File Quality</p>
+                   
+                      </div>
+                    </div>
+
+                    <!-- Activity Item 2 -->
+                    <div class="flex items-center gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
+                      <div class="bg-teal-accent rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
+                        <i class="fa-regular fa-clock text-dark-text" style="font-size:16px;"></i>
+                      </div>
+                      <div class="flex-1">
+                        <p class="text-paragraph-material text-dark-text font-bold">Optimal Planning</p>
+                        
+                      </div>
+                    </div>
+
+                    <!-- Activity Item 3 -->
+                    <div class="flex items-center gap-4 p-4 bg-gray-outline rounded-material hover:bg-gray-300 transition-colors">
+                      <div class="bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0" style="width:30px; height:30px;">
+                        <i class="fa-solid fa-rotate text-dark-text" style="font-size:16px;"></i>
+                      </div>
+                      <div class="flex-1">
+                        <p class="text-paragraph-material text-dark-text font-bold">Auto-Sync</p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-1"></div>
+            </div>
+          </section>
+      </main>
+        </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-primary-violet rounded-t-material mt-12 p-8" style="width: calc(100% + 140px); margin-left: -70px; margin-right: -70px;">
+      <div class="w-full mx-auto" style="max-width: calc(100% - 140px); margin-left: 70px; margin-right: 70px;">
+        <div class="grid grid-cols-12 gap-8">
+        
+        <!-- Company Info -->
+        <div class="col-span-6">
+          <h2 class="text-xl font-bold text-white mb-4">Crono Masters</h2>
+          <p class="text-paragraph-material text-gray-200 mb-4">
+            your app of time management offers optimal organization of work and studies, in a modern, intuitive, and collaborative environment.
+          </p>
+          <div class="flex gap-3">
+            <i class="fab fa-facebook text-white text-2xl cursor-pointer hover:text-gray-200"></i>
+            <i class="fab fa-twitter text-white text-2xl cursor-pointer hover:text-gray-200"></i>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-span-3">
+          <h3 class="text-lg font-semibold text-white mb-4">Navigation</h3>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#" class="text-paragraph-material text-gray-200 hover:text-white transition-colors">Accueil</a></li>
+            <li><a href="#" class="text-paragraph-material text-gray-200 hover:text-white transition-colors">Gestion de temps</a></li>
+            <li><a href="#" class="text-paragraph-material text-gray-200 hover:text-white transition-colors">Cours</a></li>
+            <li><a href="#" class="text-paragraph-material text-gray-200 hover:text-white transition-colors">Pression</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-span-3">
+          <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
+          
+          <div class="flex items-center gap-2 mb-2">
+            <i class="fas fa-map-marker-alt text-white"></i>
+            <span class="text-paragraph-material text-gray-200">El ghazela Esprit</span>
+          </div>
+          
+          <div class="flex items-center gap-2 mb-2">
+            <i class="fas fa-phone text-white"></i>
+            <span class="text-paragraph-material text-gray-200">29538127</span>
+          </div>
+          
+          <div class="flex items-center gap-2">
+            <i class="fas fa-envelope text-white"></i>
+            <span class="text-paragraph-material text-gray-200">contact@tmp.tn</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const sidebar = document.querySelector('aside');
+      if (!sidebar) return;
+      sidebar.classList.toggle('hidden');
+      sidebar.classList.toggle('flex');
+    }
+  </script>
+  <script>
+    function toggleMobileMenu() {
+      const sidebar = document.querySelector('aside');
+      if (!sidebar) return;
+      sidebar.classList.toggle('hidden');
+      sidebar.classList.toggle('flex');
+    }
+  </script>
+</body>
+</html>
