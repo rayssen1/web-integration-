@@ -1428,3 +1428,13 @@ video {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(102 126 234 / var(--tw-ring-opacity, 1));
 }
+.btn-mode {
+    width: 170px;
+    height: 40px;
+    background: #E2E8F0;
+    color: #1A202C;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+}

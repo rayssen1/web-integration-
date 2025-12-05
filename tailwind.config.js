@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./public/**/*.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    
   ],
    theme: {
     extend: {
@@ -12,6 +13,7 @@ module.exports = {
         'dark-text': '#1D1D1B',
         'teal-accent': '#38B2AC',
         'gray-outline': '#E2E8F0',
+        'method-gray': '#E2E8F0', // <-- AJOUT
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],

@@ -103,45 +103,42 @@
 
 
       <!-- MAIN CONTENT -->
-      <main class="col-span-9">
+      <main class="col-span-9 px-12 pt-6 font-inter">
 
-   <!-- TITRE -->
-<div class="flex flex-col mb-10 mt-4 w-full">
+    <!-- TITRE -->
+    <div class="flex flex-col mb-10 mt-4 w-full">
 
-    <!-- LIGNE RETOUR + TITRE CENTRÉ -->
-    <div class="w-full flex items-center justify-between">
+        <!-- LIGNE : RETOUR + TITRE CENTRÉ -->
+        <div class="w-full flex items-center justify-between">
 
-        <!-- Retour à gauche -->
-        <div class="flex items-center cursor-pointer"
-             onclick="history.back()">
-            <i class="fas fa-arrow-left text-black text-[16px] mr-1"></i>
-            <span class="text-[14px] font-medium text-black">Retour</span>
+            <!-- Retour -->
+            <button onclick="history.back()" class="flex items-center cursor-pointer">
+                <i class="fas fa-arrow-left text-black text-[16px] mr-1"></i>
+                <span class="text-[14px] font-medium text-black">Retour</span>
+            </button>
+
+            <!-- Titre au centre -->
+            <p class="text-[14px] font-extrabold text-black text-center flex-grow">
+                Suivie mes cours
+            </p>
+
+            <!-- Compensation -->
+            <div class="w-[70px]"></div>
         </div>
 
-        <!-- Titre centré -->
-        <p class="text-[14px] font-extrabold text-black leading-none text-center flex-grow">
-            Suivie mes cours
-        </p>
+        <!-- CARTE % -->
+        <div class="border border-gray-outline rounded-material px-6 py-4 mt-6 mx-auto w-[380px] text-center bg-white shadow-material">
+            <p class="text-dark-text font-semibold text-lg">58,33%</p>
+            <p class="text-dark-text mt-2">1 chapitre(s) restant</p>
+        </div>
 
-        <!-- Espace vide pour équilibrer -->
-        <div style="width:70px;"></div>
     </div>
 
-    <!-- Carte % centrée -->
-    <div class="border border-gray-outline rounded-material px-6 py-4 mt-6 mx-auto"
-         style="width: 380px; text-align:center;">
-        <p class="text-dark-text font-semibold text-lg">58,33%</p>
-        <p class="text-dark-text mt-2">1 chapitre(s) restant</p>
-    </div>
+    <!-- CONTENU + PROF (ON GARDE LE CSS INLINE) -->
+    <div class="flex gap-8 mt-5">
 
-</div>
-
-
-        <!-- CONTENU + PROF -->
-        <div style="display:flex; gap:32px; margin-top:20px;">
-
-          <!-- CONTENU DU COURS -->
-          <div style="
+        <!-- CONTENU DU COURS -->
+        <div style="
             width:419px;
             height:615px;
             border:1px solid #E2E8F0;
@@ -150,87 +147,94 @@
             background:#FFFFFF;
             padding:20px 18px;
             font-family:Inter, sans-serif;
-          ">
+        ">
 
             <h3 style="font-size:16px; font-weight:600; margin-bottom:20px;">Contenu du cours :</h3>
 
             <!-- CHAPITRE 1 -->
             <div style="margin-bottom:16px;">
-              <div style="font-size:14px; margin-bottom:6px;">Chapitre1 - Introduction</div>
-              <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
-                <div style="
-                  position:absolute; top:0; left:0; height:100%; width:70%;
-                  background:#667EEA; border-radius:6px; 
-                  display:flex; align-items:center; padding-left:16px; color:white; font-size:14px;">
-                  Continuer
+                <div style="font-size:14px; margin-bottom:6px;">Chapitre1 - Introduction</div>
+                <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
+                    <div style="
+                        position:absolute; top:0; left:0; height:100%; width:70%;
+                        background:#667EEA; border-radius:6px; 
+                        display:flex; align-items:center; padding-left:16px; color:white; font-size:14px;">
+                        Continuer
+                    </div>
+                    <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">70%</span>
                 </div>
-                <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">70%</span>
-              </div>
             </div>
 
             <!-- CHAPITRE 2 -->
             <div style="margin-bottom:16px;">
-              <div style="font-size:14px; margin-bottom:6px;">Chapitre2 - Le process UX</div>
-              <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
-                <div style="position:absolute; top:0; left:0; height:100%; width:50%;
-                    background:#667EEA; border-radius:6px; display:flex; align-items:center; padding-left:16px; color:white;">
-                  Continuer
+                <div style="font-size:14px; margin-bottom:6px;">Chapitre2 - Le process UX</div>
+                <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
+                    <div style="
+                        position:absolute; top:0; left:0; height:100%; width:50%;
+                        background:#667EEA; border-radius:6px; display:flex; align-items:center; padding-left:16px; color:white;">
+                        Continuer
+                    </div>
+                    <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">50%</span>
                 </div>
-                <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">50%</span>
-              </div>
             </div>
 
-            <!-- CHAPITRES 3 à 6 identiques -->
+            <!-- CHAPITRE 3 -->
             <div style="margin-bottom:16px;">
-              <div style="font-size:14px; margin-bottom:6px;">Chapitre3 - Phase de définition</div>
-              <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
-                <div style="position:absolute; top:0; left:0; height:100%; width:80%;
-                    background:#667EEA; border-radius:6px; display:flex; align-items:center; padding-left:16px; color:white;">
-                  Continuer
+                <div style="font-size:14px; margin-bottom:6px;">Chapitre3 - Phase de définition</div>
+                <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
+                    <div style="
+                        position:absolute; top:0; left:0; height:100%; width:80%;
+                        background:#667EEA; border-radius:6px; display:flex; align-items:center; padding-left:16px; color:white;">
+                        Continuer
+                    </div>
+                    <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">80%</span>
                 </div>
-                <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">80%</span>
-              </div>
             </div>
 
+            <!-- CHAPITRE 4 -->
             <div style="margin-bottom:16px;">
-              <div style="font-size:14px; margin-bottom:6px;">Chapitre4 - Prototyper</div>
-              <div style="width:100%; height:36px; background:#DDE7FF; border-radius:6px; display:flex; align-items:center; padding-left:16px;">
-                Débuter
-                <span style="margin-left:auto; margin-right:16px;">0%</span>
-              </div>
-            </div>
-
-            <div style="margin-bottom:16px;">
-              <div style="font-size:14px; margin-bottom:6px;">Chapitre5 - Tester</div>
-              <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
-                <div style="position:absolute; top:0; left:0; height:100%; width:80%;
-                    background:#667EEA; border-radius:6px; display:flex; align-items:center; padding-left:16px; color:white;">
-                  Continuer
+                <div style="font-size:14px; margin-bottom:6px;">Chapitre4 - Prototyper</div>
+                <div style="width:100%; height:36px; background:#DDE7FF; border-radius:6px; display:flex; align-items:center; padding-left:16px;">
+                    Débuter
+                    <span style="margin-left:auto; margin-right:16px;">0%</span>
                 </div>
-                <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">80%</span>
-              </div>
             </div>
 
+            <!-- CHAPITRE 5 -->
+            <div style="margin-bottom:16px;">
+                <div style="font-size:14px; margin-bottom:6px;">Chapitre5 - Tester</div>
+                <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
+                    <div style="
+                        position:absolute; top:0; left:0; height:100%; width:80%;
+                        background:#667EEA; border-radius:6px; display:flex; align-items:center; padding-left:16px; color:white;">
+                        Continuer
+                    </div>
+                    <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">80%</span>
+                </div>
+            </div>
+
+            <!-- CHAPITRE 6 -->
             <div>
-              <div style="font-size:14px; margin-bottom:6px;">Chapitre6 - Itération</div>
-              <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
-                <div style="position:absolute; top:0; left:0; height:100%; width:70%;
-                    background:#667EEA; border-radius:6px; display:flex; align-items:center; padding-left:16px; color:white;">
-                  Continuer
+                <div style="font-size:14px; margin-bottom:6px;">Chapitre6 - Itération</div>
+                <div style="width:100%; height:36px; background:#E2E8F0; border-radius:6px; position:relative;">
+                    <div style="
+                        position:absolute; top:0; left:0; height:100%; width:70%;
+                        background:#667EEA; border-radius:6px; display:flex; align-items:center; padding-left:16px; color:white;">
+                        Continuer
+                    </div>
+                    <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">70%</span>
                 </div>
-                <span style="position:absolute; right:16px; top:50%; transform:translateY(-50%);">70%</span>
-              </div>
             </div>
 
             <p style="margin-top:auto; text-align:center; font-size:12px; color:#6B7280;">
-              Our AI will automatically analyze your schedule<br>
-              and create an optimized planner
+                Our AI will automatically analyze your schedule<br>
+                and create an optimized planner
             </p>
 
-          </div>
+        </div>
 
-          <!-- COLONNE PROF -->
-          <div style="
+        <!-- COLONNE PROF (on garde CSS inline) -->
+        <div style="
             width:419px;
             height:615px;
             border:1px solid #E2E8F0;
@@ -238,108 +242,109 @@
             background:#FFFFFF;
             padding:20px;
             box-shadow:0px 4px 12px rgba(0,0,0,0.06);
-          ">
+        ">
 
             <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;">
-              <div style="display:flex; align-items:center; gap:12px;">
-                <div style="
-                  width:40px; height:40px; background:black; border-radius:8px;
-                  display:flex; align-items:center; justify-content:center; color:white;">
-                  <i class="fas fa-chalkboard-teacher"></i>
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <div style="
+                        width:40px; height:40px; background:black; border-radius:8px;
+                        display:flex; align-items:center; justify-content:center; color:white;">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+
+                    <div>
+                        <div style="font-size:16px; font-weight:600;">Corps enseignant du cours</div>
+                        <div style="font-size:13px; color:#4B5563;">Slim Jendoubi</div>
+                    </div>
                 </div>
 
-                <div>
-                  <div style="font-size:16px; font-weight:600;">Corps enseignant du cours</div>
-                  <div style="font-size:13px; color:#4B5563;">Slim Jendoubi</div>
+                <div style="width:32px; height:32px; border:1px solid #E5E7EB; border-radius:8px;
+                            display:flex; align-items:center; justify-content:center;">
+                    <i class="fas fa-envelope"></i>
                 </div>
-              </div>
-
-              <div style="width:32px; height:32px; border:1px solid #E5E7EB; border-radius:8px;
-                          display:flex; align-items:center; justify-content:center;">
-                <i class="fas fa-envelope"></i>
-              </div>
             </div>
 
-            <!-- 3 CARDS -->
+            <!-- CARDS -->
             <div style="display:flex; flex-direction:column; gap:16px;">
 
-              <div style="
-                width:100%; height:130px; border-radius:12px;
-                border:1px solid #E5E7EB; background:#F4FBF9;
-                padding:14px 16px; display:flex; justify-content:space-between;">
-                <div>
-                  <div style="font-size:14px; font-weight:600;">Annulaire</div>
-                  <div style="font-size:13px; color:#6B7280;">Afficher toutes les membres de cours</div>
+                <div style="
+                    width:100%; height:130px; border-radius:12px;
+                    border:1px solid #E5E7EB; background:#F4FBF9;
+                    padding:14px 16px; display:flex; justify-content:space-between;">
+                    <div>
+                        <div style="font-size:14px; font-weight:600;">Annulaire</div>
+                        <div style="font-size:13px; color:#6B7280;">Afficher toutes les membres de cours</div>
+                    </div>
+                    <i class="fas fa-users" style="color:#9CA3AF;"></i>
                 </div>
-                <i class="fas fa-users" style="color:#9CA3AF;"></i>
-              </div>
 
-              <div style="
-                width:100%; height:130px; border-radius:12px;
-                border:1px solid #E5E7EB; background:#F7F9FF;
-                padding:14px 16px; display:flex; justify-content:space-between;">
-                <div>
-                  <div style="font-size:14px; font-weight:600;">Présence</div>
-                  <div style="font-size:13px; color:#6B7280;">Afficher votre présence</div>
+                <div style="
+                    width:100%; height:130px; border-radius:12px;
+                    border:1px solid #E5E7EB; background:#F7F9FF;
+                    padding:14px 16px; display:flex; justify-content:space-between;">
+                    <div>
+                        <div style="font-size:14px; font-weight:600;">Présence</div>
+                        <div style="font-size:13px; color:#6B7280;">Afficher votre présence</div>
+                    </div>
+                    <i class="fas fa-clipboard-check" style="color:#9CA3AF;"></i>
                 </div>
-                <i class="fas fa-clipboard-check" style="color:#9CA3AF;"></i>
-              </div>
 
-              <div style="
-                width:100%; height:130px; border-radius:12px;
-                border:1px solid #E5E7EB; background:white;
-                padding:14px 16px; display:flex; justify-content:space-between;">
-                <div>
-                  <div style="font-size:14px; font-weight:600;">Outils</div>
-                  <div style="font-size:13px; color:#6B7280;">Afficher les outils</div>
+                <div style="
+                    width:100%; height:130px; border-radius:12px;
+                    border:1px solid #E5E7EB; background:white;
+                    padding:14px 16px; display:flex; justify-content:space-between;">
+                    <div>
+                        <div style="font-size:14px; font-weight:600;">Outils</div>
+                        <div style="font-size:13px; color:#6B7280;">Afficher les outils</div>
+                    </div>
+                    <i class="fas fa-tools" style="color:#9CA3AF;"></i>
                 </div>
-                <i class="fas fa-tools" style="color:#9CA3AF;"></i>
-              </div>
 
             </div>
-
-          </div>
 
         </div>
 
-        <!-- GRAPHIQUES -->
-        <div class="flex justify-between items-start mt-16 px-12">
+    </div>
 
-          <!-- GRAPH BARRES -->
-          <div style="width:322px; height:268px; display:flex; flex-direction:column; align-items:center;">
-              <h3 style="font-size:20px; font-weight:700; margin-bottom:10px;">Pourcentage linéaires</h3>
+    <!-- GRAPHIQUES (on garde le inline CSS) -->
+    <div class="flex justify-between items-start mt-16 px-12">
 
-              <div style="width:322px; height:228px; position:relative;">
+        <!-- GRAPH BARRES -->
+        <div style="width:322px; height:268px; display:flex; flex-direction:column; align-items:center;">
+            <h3 style="font-size:20px; font-weight:700; margin-bottom:10px;">Pourcentage linéaires</h3>
 
-                  <div style="position:absolute; left:30px; top:10px; width:2px; height:170px; background:black;"></div>
-                  <div style="position:absolute; left:30px; bottom:25px; width:250px; height:2px; background:black;"></div>
+            <div style="width:322px; height:228px; position:relative;">
 
-                  <span style="position:absolute; left:0; top:40px;">58,33</span>
-                  <span style="position:absolute; left:0; top:100px;">41,67</span>
+                <div style="position:absolute; left:30px; top:10px; width:2px; height:170px; background:black;"></div>
+                <div style="position:absolute; left:30px; bottom:25px; width:250px; height:2px; background:black;"></div>
 
-                  <div style="position:absolute; left:90px; bottom:25px; width:45px; height:140px; background:#E6EBFF; border-radius:25px;">
-                      <div style="width:100%; height:70px; background:#667EEA; border-radius:25px 25px 0 0; position:absolute; bottom:0;"></div>
-                  </div>
+                <span style="position:absolute; left:0; top:40px;">58,33</span>
+                <span style="position:absolute; left:0; top:100px;">41,67</span>
 
-                  <div style="position:absolute; left:190px; bottom:25px; width:45px; height:180px; background:#E6EBFF; border-radius:25px;">
-                      <div style="width:100%; height:120px; background:#667EEA; border-radius:25px 25px 0 0; position:absolute; bottom:0;"></div>
-                  </div>
+                <div style="position:absolute; left:90px; bottom:25px; width:45px; height:140px; background:#E6EBFF; border-radius:25px;">
+                    <div style="width:100%; height:70px; background:#667EEA; border-radius:25px 25px 0 0; position:absolute; bottom:0;"></div>
+                </div>
 
-              </div>
-          </div>
+                <div style="position:absolute; left:190px; bottom:25px; width:45px; height:180px; background:#E6EBFF; border-radius:25px;">
+                    <div style="width:100%; height:120px; background:#667EEA; border-radius:25px 25px 0 0; position:absolute; bottom:0;"></div>
+                </div>
 
-          <!-- PIE CHART -->
-          <div style="width:380px;">
+            </div>
+        </div>
+
+        <!-- PIE CHART -->
+        <div style="width:380px;">
             <h3 style="text-align:center; font-size:20px; font-weight:700; margin-bottom:20px;">Pourcentage circulaire</h3>
 
             <div style="width:327px; height:275px; margin:auto;">
-              <canvas id="pieChart" width="327" height="235"></canvas>
+                <canvas id="pieChart" width="327" height="235"></canvas>
             </div>
-          </div>
-
         </div>
 
-      </main>
+    </div>
+
+</main>
+
     </div>
 
     <!-- FOOTER IDENTIQUE -->

@@ -111,181 +111,82 @@
       </aside>
 
 
+<main class="col-span-9 flex flex-col items-center pt-6">
 
-      <!-- MAIN -->
-      <main class="col-span-9 flex flex-col gap-8">
+    <!-- RETOUR -->
+    <div class="w-full flex items-center gap-2 text-dark-text text-sm cursor-pointer mb-6 pl-4">
+        <i class="fas fa-arrow-left text-xs"></i>
+        <span onclick="history.back()">Retour</span>
+    </div>
 
-        <!-- RETOUR -->
-        <div class="flex items-center gap-2 text-dark-text text-sm cursor-pointer mt-2">
-          <i class="fas fa-arrow-left text-xs"></i>
-          <span onclick="history.back()">Retour</span>
+    <!-- MÉTHODE D’APPRENTISSAGE (CONTAINER GRIS) -->
+  <div class="w-[540px] h-[38px] bg-gray-outline rounded-full flex items-center justify-center text-[16px] font-medium text-[#1D1D1B] mx-auto shadow-sm">
+    Méthode d'apprentissage
+</div>
+
+
+    <!-- LIGNE DE SÉPARATION -->
+    <div class="w-[540px] h-[1px] bg-black mb-8"></div>
+
+    <!-- TITRE -->
+    <h2 class="text-center text-[20px] font-medium text-[#1D1D1B] mb-10">
+        Tester vos connaissance
+    </h2>
+
+
+    <!-- BLOC 1 : PDF → VIDÉO -->
+    <div class="flex items-center justify-center gap-28 mb-6">
+
+        <!-- PDF -->
+        <div class="flex flex-col items-center">
+            <img src="images/pdf.png" class="w-[150px] h-[150px] object-contain">
+            <p class="text-[12px] text-gray-600 mt-2">PDF (3 pages)</p>
         </div>
 
-        <!-- BANDEAU MÉTHODE D'APPRENTISSAGE -->
-        <section class="flex justify-center mt-4">
-          <div
-            style="
-              width: 450px;
-              height: 36px;
-              background: #E5ECF5;
-              border-radius: 18px;
-              display:flex;
-              align-items:center;
-              justify-content:center;
-              font-family: Inter, sans-serif;
-              font-size: 16px;
-              font-weight: 500;
-              color: #1D1D1B;
-            "
-          >
-            Méthode d'apprentissage
-          </div>
-        </section>
+        <!-- FLÈCHE -->
+        <div class="text-[28px]">→</div>
 
-        <!-- LIGNE -->
-        <div class="flex justify-center mt-6">
-          <div style="width: 430px; height:1px; background:#1D1D1B;"></div>
+        <!-- VIDÉO -->
+        <div class="flex flex-col items-center">
+            <img src="images/video.png" class="w-[150px] h-[150px] object-contain rounded-lg">
+            <p class="text-[12px] text-gray-600 mt-2">vidéo (5 min)</p>
+        </div>
+    </div>
+
+    <!-- FLÈCHE VERS BAS -->
+    <div class="text-[24px] mb-6">↓</div>
+
+    <!-- BLOC 2 : PODCAST + EXAMEN BLANC -->
+    <div class="flex items-center justify-center gap-40 mb-8">
+
+        <!-- PODCAST -->
+        <div class="flex flex-col items-center">
+            <img src="images/podcast.png"
+                 class="w-[170px] h-[130px] object-cover rounded-lg">
+            <p class="text-[12px] text-gray-800 font-medium mt-2">PODCAST</p>
         </div>
 
-        <!-- TITRE TESTER VOS CONNAISSANCES -->
-        <section class="mt-10 flex justify-center">
-          <h2
-            style="
-              font-family: Inter, sans-serif;
-              font-size: 20px;
-              font-weight: 500;
-              color:#1D1D1B;
-            "
-          >
-            Tester vos connaissances
-          </h2>
-        </section>
-
-        <!-- BLOC 1 : PDF -> VIDEO -->
-        <section class="mt-12 flex justify-center">
-          <div class="flex items-center gap-24">
-
-            <!-- PDF -->
-            <div class="flex flex-col items-center">
-              <img
-                src="images/pdf.png"
-                alt="PDF"
-                style="width:140px; height:140px; object-fit:contain;"
-              />
-              <p
-                style="
-                  margin-top:8px;
-                  font-size: 12px;
-                  font-family: Inter, sans-serif;
-                  color:#4B5563;
-                "
-              >
-                PDF (3 pages)
-              </p>
-            </div>
-
-            <!-- FLECHE -->
-            <div style="font-size:30px; color:#000;">→</div>
-
-            <!-- VIDEO -->
-            <div class="flex flex-col items-center">
-              <img
-                src="images/video.png"
-                alt="Vidéo"
-                style="width:150px; height:150px; object-fit:contain;"
-              />
-              <p
-                style="
-                  margin-top:8px;
-                  font-size: 12px;
-                  font-family: Inter, sans-serif;
-                  color:#4B5563;
-                "
-              >
-                Vidéo (5 min)
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- FLECHE VERS LE BAS -->
-        <div class="flex justify-center mt-4">
-          <i class="fas fa-arrow-down"></i>
+        <!-- EXAMEN BLANC -->
+        <div class="flex flex-col items-center">
+            <img src="images/examen.png"
+                 class="w-[170px] h-[130px] object-cover rounded-lg">
+            <p class="text-[12px] text-gray-800 font-medium mt-2">Examen Blanc</p>
         </div>
 
-        <!-- BLOC 2 : PODCAST + EXAMEN BLANC -->
-        <section class="mt-8 flex justify-center">
-          <div class="flex items-center gap-40">
+    </div>
 
-            <!-- PODCAST -->
-            <div class="flex flex-col items-center">
-              <img
-                src="images/podcast.png"
-                alt="Podcast"
-                style="width:170px; height:130px; object-fit:cover; border-radius:8px;"
-              />
-              <p
-                style="
-                  margin-top:8px;
-                  font-size: 12px;
-                  font-family: Inter, sans-serif;
-                  color:#111827;
-                  font-weight:500;
-                "
-              >
-                PODCAST
-              </p>
-            </div>
+    <!-- FLÈCHE VERS BAS -->
+    <div class="text-[24px] mb-6">↓</div>
 
-            <!-- EXAMEN BLANC -->
-            <div class="flex flex-col items-center">
-              <img
-                src="images/examen.png"
-                alt="Examen blanc"
-                style="width:170px; height:130px; object-fit:cover; border-radius:8px;"
-              />
-              <p
-                style="
-                  margin-top:8px;
-                  font-size: 12px;
-                  font-family: Inter, sans-serif;
-                  color:#111827;
-                  font-weight:500;
-                "
-              >
-                Examen blanc
-              </p>
-            </div>
+    <!-- BLOC 3 : QUIZ -->
+    <div class="flex flex-col items-center mb-16">
+        <img src="images/quiz.png" class="w-[190px] object-contain">
+        <p class="text-[12px] text-gray-800 mt-2">QUIZ (10 questions)</p>
+    </div>
 
-          </div>
-        </section>
+</main>
 
-        <!-- FLECHE VERS LE BAS (sous examen blanc) -->
-        <div class="flex justify-center mt-4">
-          <i class="fas fa-arrow-down"></i>
-        </div>
 
-        <!-- BLOC 3 : QUIZIZZ -->
-        <section class="mt-4 flex flex-col items-center justify-center mb-16">
-          <img
-            src="images/quiz.png"
-            alt="Quizizz"
-            style="width:190px; height:auto; object-fit:contain;"
-          />
-          <p
-            style="
-              margin-top:10px;
-              font-size: 12px;
-              font-family: Inter, sans-serif;
-              color:#111827;
-            "
-          >
-            QUIZ (10 questions)
-          </p>
-        </section>
-
-      </main>
     </div>
 
     <!-- FOOTER -->
