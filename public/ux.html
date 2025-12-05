@@ -111,137 +111,89 @@
       </aside>
 
 
-      <!-- MAIN CONTENT -->
-      <main class="col-span-9">
+     <main class="col-span-9 px-12 pt-6">
 
-        <div class="w-full px-12">
+    <!-- RETOUR -->
+    <div class="flex items-center gap-2 cursor-pointer text-dark-text mb-6">
+        <i class="fas fa-arrow-left"></i>
+        <span>Retour</span>
+    </div>
 
-          <!-- RETOUR -->
-          <div class="flex items-center gap-2 cursor-pointer text-dark-text mb-6">
-            <a href="cours.html" class="flex items-center gap-2">
-              <i class="fas fa-arrow-left"></i>
-              <span>Retour</span>
-            </a>
-          </div>
-
-          <!-- BARRE AFFICHAGE -->
-          <div class="w-full flex justify-center mb-10">
-            <div class="w-[453px] h-[78px] border border-gray-300 rounded-xl flex items-center justify-center text-dark-text text-xl font-semibold">
-                Affichage cours
-            </div>
-          </div>
-
-          <!-- TEXTE + IMAGE -->
-          <div class="flex justify-between items-start mt-5">
-
-            <!-- TEXTE -->
-            <div class="w-[348px]">
-              <h2 class="text-2xl font-bold mb-4">UX Design</h2>
-
-              <p class="text-dark-text text-base leading-tight mb-4">
-                Découvrez le processus de conception centré sur l'utilisateur
-              </p>
-
-              <ul class="text-dark-text text-sm leading-6">
-                <li>.Durée: 7 semaines</li>
-                <li>.niveau : débutant</li>
-                <li>.6 chapitres</li>
-              </ul>
-            </div>
-
-            <!-- IMAGE + BOUTON -->
-            <div class="flex flex-col items-center mr-24">
-              <img src="images/uxui.jpg"
-                   class="rounded-md object-cover mb-4"
-                   style="width:228px; height:152px;">
-
-              <a href="suivicours.html"
-                 class="bg-primary-violet text-white rounded-material flex items-center justify-center"
-                 style="width:161px; height:45px; font-size:16px;">
-                Suivi mes cours
-              </a>
-            </div>
-
-          </div>
-
+    <!-- AFFICHE COURS -->
+    <div class="w-full flex justify-center mb-10">
+        <div class="w-[460px] h-[80px] border border-gray-200 rounded-xl flex items-center justify-center text-xl font-semibold text-dark-text">
+            Affichage cours
         </div>
+    </div>
 
-        <!-- BLOC CHAPITRE ACTUEL -->
-        <div style="
-            position: relative;
-            width: 540px;
-            height: 420px;
-            border: 1px solid #E2E8F0;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-top:40px;
-        ">
+    <!-- UX DESIGN Bloc -->
+    <div class="flex justify-between items-start">
 
-            <div style="
-                background:#667EEA;
-                color:white;
-                padding:10px 15px;
-                border-radius:12px 12px 0 0;
-                font-size:18px;
-                font-weight:600;
-            ">
-                chapitre actuel
-            </div>
+        <!-- TEXTES -->
+        <div class="w-[340px]">
+            <h2 class="text-3xl font-bold mb-4">UX Design</h2>
 
-            <h3 style="text-align:center; font-size:22px; font-weight:600; margin-top:15px; margin-bottom:10px;">
-                Chapitre 1 : Introduction
-            </h3>
-
-            <p style="text-align:center; font-size:15px; line-height:20px; color:#1D1D1B;">
-                Découvrez les bases de conception UX et sa <br>
-                importance dans le développement de produit
+            <p class="text-dark-text mb-4 leading-tight">
+                Découvrez le processus de conception centré sur l'utilisateur
             </p>
 
-            <!-- PROGRESS BAR -->
-            <div style="width:100%; display:flex; justify-content:center; margin-top:25px;">
-                <div style="
-                    width: 480px;
-                    height: 17px;
-                    background:#D9D9D9;
-                    border-radius:6px;
-                    position:relative;">
-                    <div style="
-                        width: 70%;
-                        height: 17px;
-                        background:#667EEA;
-                        border-radius:6px;
-                        position:absolute;">
-                    </div>
-                </div>
+            <ul class="text-dark-text text-sm leading-6">
+                <li>.Durée : 7 semaines</li>
+                <li>.Niveau : débutant</li>
+                <li>.6 chapitres</li>
+            </ul>
+        </div>
 
-                <span style="margin-left:10px; font-size:18px; font-weight:600; color:#1D1D1B;">70%</span>
-            </div>
+        <!-- IMAGE + BUTTON -->
+        <div class="flex flex-col items-center">
+<img src="images/uxui.jpg" class="w-[230px] h-[150px] object-cover rounded-lg mb-6">
+
+            <a href="suivicours.html"
+   class="w-[150px] h-[40px] bg-primary-violet text-white rounded-full text-sm font-medium flex items-center justify-center">
+    Suivi mes cours
+</a>
+
+        </div>
+    </div>
+
+    <!-- CHAPITRE ACTUEL -->
+    <div class="w-[480px] mx-auto mt-12 border border-gray-300 rounded-xl bg-white shadow-sm">
+
+        <!-- HEADER -->
+        <div class="bg-primary-violet text-white font-semibold px-4 py-2 rounded-t-xl text-sm">
+            chapitre actuel
+        </div>
+
+        <!-- TEXTE -->
+        <div class="p-6">
+            <h3 class="text-lg font-semibold mb-3">Chapitre 1 : Introduction</h3>
+
+            <p class="text-dark-text text-sm leading-5 mb-6">
+                Découvrez les bases de conception UX et sa importance dans le développement de produit
+            </p>
+
+     <!-- PROGRESS BAR --> <div style="width:100%; display:flex; justify-content:center; margin-top:25px;"> <div style=" width: 480px; height: 17px; background:#D9D9D9; border-radius:6px; position:relative;"> <div style=" width: 70%; height: 17px; background:#667EEA; border-radius:6px; position:absolute;"> </div> </div> <span style="margin-left:10px; font-size:18px; font-weight:600; color:#1D1D1B;">70%</span> </div>
 
             <!-- BUTTONS -->
-            <button style="
-                width:172px; height:46px; border-radius:50px;
-                background:#E2E8F0; color:#1A202C; font-weight:500;
-                position:absolute; left:35px; top:275px;">
-                Mode d’apprentissage
-            </button>
-
-      <button onclick="window.location.href='testerconnaisonnace.html'"
-        style="
-            width:166px; height:46px; border-radius:50px;
-            background:#667EEA; color:white;
-            display:flex; align-items:center; justify-content:center; gap:8px;
-            font-size:16px;
-            position:absolute; left:343px; top:275px;">
-    Continuer <i class="fas fa-chevron-right"></i>
+            <div class="flex justify-between mt-6">
+               <button class="btn-mode" onclick="window.location.href='testerconnaisonnace.html'">
+    Mode d’apprentissage
 </button>
 
 
 
-        </div>
 
-      </main>
+                <a href="testerconnaisonnace.html"
+   class="w-[130px] h-[40px] rounded-full bg-primary-violet text-white text-sm font-medium flex items-center justify-center gap-2">
+    Continuer <i class="fas fa-chevron-right"></i>
+</a>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
 
     </div>
 
